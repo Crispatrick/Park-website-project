@@ -1,19 +1,21 @@
 :root{
     --header_Margin: 20px;
-    --header_border_Radius: 50px;
+    --header_border_Radius: 40px;
 }
 
 header{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     
     background-color: var(--light_Blue);
     color: var(--main_Text);
     align-self: center;
 
-    height: 50px;
+    min-height: 50px;
+
+    
     
 }
 #name_Rave{
@@ -21,13 +23,17 @@ header{
     font-size: 2rem;
     font-weight: bolder;
     align-self: center;
-    margin-left: var(--header_Margin);
+    /* margin-left: var(--header_Margin); */
+
+    text-align: center;
+  
+    
 }
 nav{
     display: flex;
     align-self: center;
 
-    margin-right: var(--header_Margin);
+    /* margin-right: var(--header_Margin); */
     
 }
 nav ul{
@@ -54,13 +60,15 @@ nav ul li{
     padding: 10px;
     transition: 1s;
     border-radius: var(--header_border_Radius);
+
+    
 }
 
 li:hover{
     transition: 0.2s;
     background-color: var(--dark_Blue);
 
-    transform: translatey(15px);
+    transform: translatey(10px);
     border-radius: var(--header_border_Radius);
 
     
