@@ -1,0 +1,13 @@
+:root{
+    /* Background colors */
+    --dark_Blue: #211C6A;
+    --light_Blue: #59B4C3;
+    --green: #74E291;
+    --yellow: #EFF396;
+
+    /* Text Color */
+    --main_Text: white;
+
+}
+
+/* 560 width media query */
