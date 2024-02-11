@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="global_Palette.css">
+    
     <title>Rave</title>
 </head>
 <body>
@@ -16,14 +17,13 @@
     <main>
         <section class="hero">
             <!-- this is the background -->
-            <video muted autoplay class="hero_Video">
-                <source src="Resources\Videos\RAVE.webm">
-                <source src="Resources\Videos\RAVE_2.webm">
+            <video muted autoplay class="hero_Video" id="videoPlayer">
                 <source src="Resources\Videos\RAVE_3.webm">
-                <source src="Resources\Videos\RAVE_4.webm">
-            </video>        
-            
+            </video>   
+            <!-- Seems that you need to initialize the video html tag first before executing an event listener for it -->
+            <script src="js_Files\video_Player.js"></script>
 
+            
         </section>
 
 
