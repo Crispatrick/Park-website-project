@@ -1,3 +1,30 @@
+:root{
+    --section_Height: 550px;
+}
 body{
     margin: 0;
+}
+
+
+
+.hero{
+    position: relative;
+    min-height: var(--section_Height);
+    background-image: linear-gradient(90deg, rgba(33, 28, 106, 0.664) 0%, rgba(33,28,106,0) 80%);
+}
+.hero_Video{
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+    position: absolute;
+    z-index: -5;
+}
+
+
+
+
+.genre{
+    min-height: var(--section_Height);
+    background-color: var(--green);
 }
