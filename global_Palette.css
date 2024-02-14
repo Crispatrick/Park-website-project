@@ -8,6 +8,9 @@
 
     /* Text Color */
     --main_Text: white;
+
+    --font_Sub: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --font_Main:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* 560 width media query */
