@@ -1,6 +1,9 @@
 :root{
     --header_Margin: 20px;
     --header_border_Radius: 40px;
+    --btn_Padding: 40px;
+    --fadeOut: 0.5s;
+    --fadeIn: 0.2s;
 }
 
 
@@ -40,17 +43,17 @@ header{
     transition: 0.3s;
 }
 
-nav{
+#nav{
     display: flex;
     align-self: center;
-    background-color: var(--dark_Blue);
+    /* background-color: var(--dark_Blue); */
 
     border-radius: 20px 20px 0 0;
 
     /* margin-right: var(--header_Margin); */
     
 }
-nav ul{
+#navul{
     margin: 0;
     display: flex;
     justify-content: space-evenly;
@@ -64,26 +67,41 @@ nav ul{
     
     
 }
-nav ul li{
+.navulli{
     text-decoration: none;
     text-align: center;
     
     min-width: 100px;
+    min-height: 28px;
 
     
     padding: 10px;
-    transition: 2s;
-    border-radius: var(--header_border_Radius);
+    transition: 0.5s;
+
+    align-items: center;
+    /* border-radius: var(--header_border_Radius); */
 }
 
-li:hover{
-    transition: 0.2s;
-    background-color: var(--dark_Blue);
-
-    transform: translatey(15px);
+.navulli:hover{
+    transition: 0.5s;
+    background-color: var(--green);
+    
+    
+    
+   
+    /* transform: translatey(15px);
     border-radius: var(--header_border_Radius);
 
-    box-shadow: 0px 0px 0px 3px var(--light_Blue);       
+    box-shadow: 0px 0px 0px 3px var(--light_Blue);        */
+}
+.navulli:hover a{
+    transition: var(--fadeIn);
+    color: black;
+    /* color: var(--dark_Blue); */
+    /* font-weight: bold; */
+}
+.navulli a{
+    transition: var(--fadeOut);
 }
 
 
@@ -94,3 +112,161 @@ a{
 
 
 
+
+
+
+#attraction_Div{
+    position: relative;
+    /* min-height: 30px; */
+}
+
+#attractions_Main{
+    text-decoration: none;
+    text-align: center;
+    
+    min-width: 100px;
+    padding: 10px;
+    transition: 1s;
+    min-height: 28px;
+}
+#attractions_Main:hover{
+    transition: 0.5s;
+    background-color: var(--green);
+}
+/* #attractions_Main:hover a{
+    color: var(--dark_Blue);
+    font-weight: bold;
+} */
+#attractions_Main a{
+    transition: var(--fadeOut);
+    
+ 
+}
+#attractions_Main:hover a{
+    transition: 0.5s;
+    color: black;
+    
+ 
+}
+
+
+
+
+
+
+#attractions_Div:hover .attractions_DivSub{
+    
+    opacity: 1;
+    visibility: visible;
+
+
+    transition: 0.2s;
+    background-color: var(--light_Blue);
+
+    transform: translatey(4px);
+    
+
+    box-shadow: 0px 0px 0px 3px var(--light_Blue);   
+   
+}
+
+.attractions_DivSub{
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    padding: 0;
+
+    list-style: none;
+  
+    
+    
+    flex-direction: column;
+    
+
+    align-items: center;
+
+    /* border-radius: 0px 0px var(--header_border_Radius) var(--header_border_Radius); */
+    
+    /* gap: 10px; */
+    opacity: 0;
+    visibility: hidden;
+    transition: 1s ; /* Adjust timing and easing as needed */
+    
+    transform: translatey(-15px);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    
+}
+.elements{
+   width: 100%;
+   
+   padding-top: 20px;
+   padding-bottom: 20px;
+   
+   text-align: center;
+   transition: 1s;
+   
+}
+.elements a{
+    padding: 20px;
+    transition: var(--fadeOut);
+ }
+
+
+.elements:hover{
+    transition: 0.5s;
+    background-color: var(--green);
+}
+
+.elements a:hover{
+    color: black;
+}
+
+
+
+#btnBooking{
+    text-decoration: none;
+    text-align: center;
+    
+    /* padding-right: var(--btn_Padding);
+    padding-left: var(--btn_Padding); */
+
+    
+    min-width: 150px;
+    transition: var(--fadeOut);
+
+    padding: 0;
+
+    background-color: var(--dark_Blue);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* border-radius: 10px; */
+    text-decoration: none;
+    letter-spacing: 3px;
+
+    background-color: rgba(255, 255, 255, 0); 
+    color: rgb(255, 255, 255); 
+
+    border: none;
+    border: 2px solid var(--dark_Blue); 
+    margin: 5px;
+    /* flex-grow: 1;
+    /* border-radius: var(--header_border_Radius); */
+}
+
+#btnBooking:hover{
+    transition: var(--fadeIn);
+    background-color: var(--dark_Blue);
+    cursor: pointer;
+   
+    /* transform: translatey(15px);
+    border-radius: var(--header_border_Radius);
+
+    box-shadow: 0px 0px 0px 3px var(--light_Blue);        */
+}
+#btnBooking:active{
+    transition: 0.1;   
+    transform: translateY(3px);
+}

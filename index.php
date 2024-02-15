@@ -32,11 +32,29 @@
 
 
         <section class="genre">
-            <div id="cards_Container">
-                <div class="cards">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus consectetur est iusto sapiente odio fugit quaerat quae exercitationem consequuntur maiores a nostrum repellat aperiam libero repellendus, deleniti earum voluptate pariatur?</div>
-                <div class="cards">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius facilis, laborum ducimus odio modi magnam, ut voluptatum sunt accusantium molestias dolore. Dolorem nobis tempora eaque culpa sunt, error est.</div>
-                <div class="cards">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam eius facilis, laborum ducimus odio modi magnam, ut voluptatum sunt accusantium molestias dolore. Dolorem nobis tempora eaque culpa sunt, error est.</div>
+            <div id="attractions_Header">
+                <h1>ATTRACTIONS</h1>
             </div>
+            <div id="cards_Container">
+                <div class="cards">
+                    <h3>NATURE</h3>
+                    <img src="Resources\Images\attractions\bg5.jpg" alt="">
+                </div>
+                <div class="cards">
+                    <h3>LEISURE</h3>
+                    <img src="Resources\Images\attractions\ca3 cropped.jpg" alt="">
+                </div>
+                <div class="cards">
+                    <H3>ADVENTURE</H3>
+                    <img src="Resources\Images\attractions\ap3.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section id="highlights">
+            
         </section>
 
 

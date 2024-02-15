@@ -3,6 +3,7 @@
 }
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 
 
@@ -33,6 +34,10 @@ body{
 #logo{
     object-fit: contain;  
     overflow-x: hidden;
+}
+#logo:hover{
+    width: 400px;
+    cursor: pointer;    
 }
 
 #park_Welcome{
@@ -72,32 +77,121 @@ body{
 
 /* genre section css */
 .genre{
-    min-height: var(--section_Height);
+    min-height: calc(var(--section_Height) - 100px);
     background-color: var(--green);    
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
 }
 
 #cards_Container{
+    z-index: 5;
     display: flex;
-    margin: 100px;
-    gap: 100px;
+    justify-content: space-evenly;
+    /* align-items: start; */
+
+    
+    
 
     flex-wrap: wrap;
-    justify-content: center;
-   
-
+    /* justify-content: center; */
+    gap: 30px;
+    margin-bottom: 40px;
+    
    
 }
+#attractions_Header{
+    text-align: center;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 10px;
+    margin: 0;
+    color: white;
+    text-shadow: 5px 5px black;
+}
+
 
 .cards{
-    max-width: 300px;
-    font-size: 2rem;
+    /* flex-direction: row; */
+    max-width: 350px;
+    max-height: 150px;
+    
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.37);
+    border-radius: 30px 30px 0px  0px ;
+    transition: 1.5s;
+    
+    /* border: 5px black;
+    border-style:double; */
     /* background-color: black; */
+    
+}
+.cards:hover{
+    max-height: 400px;
+    max-width: 400px;
+    transition: 0.3s;
+    color: black;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.37);
+
+    /* doesnt link to anything */
+    cursor: pointer;
+}
+.cards:hover h3{
+    color: var(--dark_Blue);
+    background-color: var(--yellow);
+}
+.cards:hover img{
+    filter: blur(0px);
+    filter: brightness(100%);
 }
 
-@media(max-width: 634px){
+
+.cards h3{
+    background-color: var(--light_Blue);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 10px;
+    transition: 0.3s;
+    
+    
+}
+.cards img{
+    object-fit: contain;
+    width: 100%;
+    filter: blur(5px);
+    filter: brightness(50%);
+    transition: 0.5s;
+    /* height: 100%; */
+   
+    
+}
+
+
+#highlights{
+    height: 300px;
+    background-color: var(--dark_Blue);
+}
+
+
+
+
+
+@media(max-width: 450px){
+    #attractions_Header{
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+/* @media(max-width: 634px){
     #cards_Container{
         margin: 50px;
     }
@@ -107,4 +201,4 @@ body{
         max-width: 600px;
     }
 }
-
+ */
