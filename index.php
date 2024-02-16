@@ -16,6 +16,7 @@
     ?>
 
     <main>
+        <!-- Banner/Hero Section -->
         <section class="hero">
             <!-- this is the background -->
             <video muted autoplay class="hero_Video" id="videoPlayer">
@@ -31,6 +32,7 @@
         </section>
 
 
+        <!-- attraction Section -->
         <section class="genre">
             <div id="attractions_Header">
                 <h1>ATTRACTIONS</h1>
@@ -49,14 +51,49 @@
                     <img src="Resources\Images\attractions\ap3.jpg" alt="">
                 </div>
             </div>
+
+            <section id="highlights">
+                
+                <div class="item_Highlight">
+                    <img src="Resources\Images\attractions\ap4.jpg" alt="">
+                    <div class="highlight_Desc">
+                        <h3>Embark on an Epic Adventure!</h3>
+                        <p>Get ready for an adrenaline rush as you tackle 
+                            thrilling activities like hiking rugged trails,
+                            conquering rock faces, and soaring through the 
+                            air on zip lines in the park.</p>
+                    </div>
+                </div>
+                
+                <div class="item_Highlight"> 
+                    <img src="Resources\Images\attractions\pg2.jpg" alt="">
+                    <div class="highlight_Desc">
+                        <h3>Indulge in Blissful Leisure!</h3>
+                        <p>Experience pure relaxation and joy as you enjoy 
+                            leisurely picnics, tranquil strolls, and birdwatching 
+                            amidst the serene beauty of the park.</p>
+                    </div>
+                </div>
+                
+                <div class="item_Highlight">
+                    <img src="Resources\Images\attractions\bg1.jpg" alt="">
+                    <div class="highlight_Desc">
+                        <h3>Marvel at the Wonders of Nature!</h3>
+                        <p>Prepare to be awestruck by the breathtaking biodiversity 
+                            and ecological marvels of the park, from lush forests 
+                            to vibrant wildlife habitats, offering an unforgettable 
+                            connection with the natural world.</p>
+                    </div>
+                    
+                </div>
+        
+
+
+            
+            </section>
         </section>
 
         
-
-        <section id="highlights">
-            test
-        </section>
-
 
     </main>
     

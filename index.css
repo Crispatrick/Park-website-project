@@ -1,5 +1,15 @@
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-track{background-color:#dedede;}
+::-webkit-scrollbar-thumb{background-color:rgba(0, 0, 0, 0.2);}
+::-webkit-scrollbar-button{background-color:#dedede;}
+::-webkit-scrollbar-corner{background-color:black;}
+
 :root{
     --section_Height: 550px;
+    --Mid_TextSIze: 1.5rem;
+    --Smol_TextSize: 1rem;
+    --reponsive_text: clamp(2px,3vw,20px); 
+    --responsive_Midtext: clamp(20px,3vw,100px);
 }
 body{
     margin: 0;
@@ -102,12 +112,12 @@ body{
 }
 #attractions_Header{
     text-align: center;
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.5rem;
     letter-spacing: 10px;
     margin: 0;
     color: white;
-    text-shadow: 5px 5px black;
+    text-shadow: 5px 5px var(--dark_Blue);
 }
 
 
@@ -119,7 +129,7 @@ body{
     text-align: center;
     overflow: hidden;
     box-shadow: 10px 10px rgba(0, 0, 0, 0.37);
-    border-radius: 30px 30px 0px  0px ;
+    border-radius: 30px;
     transition: 1.5s;
     
     /* border: 5px black;
@@ -133,6 +143,7 @@ body{
     transition: 0.3s;
     color: black;
     box-shadow: 20px 20px rgba(0, 0, 0, 0.37);
+    border-radius: 0px ;
 
     /* doesnt link to anything */
     cursor: pointer;
@@ -142,17 +153,16 @@ body{
     background-color: var(--yellow);
 }
 .cards:hover img{
-    filter: blur(0px);
-    filter: brightness(100%);
+    filter: brightness(100%) blur(0px);
 }
 
 
 .cards h3{
-    background-color: var(--light_Blue);
+    background-color: var(--dark_Blue);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: var(--Mid_TextSIze);
     padding: 10px;
     transition: 0.3s;
     
@@ -161,8 +171,8 @@ body{
 .cards img{
     object-fit: contain;
     width: 100%;
-    filter: blur(5px);
-    filter: brightness(50%);
+    /* filter: ; */
+    filter: brightness(50%) blur(2px);
     transition: 0.5s;
     /* height: 100%; */
    
@@ -170,26 +180,112 @@ body{
 }
 
 
+
+
+
+
+
+/* highlight section */
 #highlights{
-    height: 300px;
-    background-color: var(--dark_Blue);
+    /* min-height: 500px;  */
+    background: linear-gradient(180deg, rgba(116,226,145,1) 0%, rgba(239,243,150,1) 80%);
+    /* background-color: var(--green); */
+    /* display: flex;
+    flex-direction: column; */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    
+    
+    
+    
+}
+
+.item_Highlight{
+    display: flex;
+
+    /* flex-wrap: wrap; */
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.726);
+    /* gap: 20px; */
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* margin: 20px; */
+    background-color: white;
+    
+    
+    
+    /* justify-content: space-evenly; */
+}
+/* .highlight_Desc p{
+    max-width: 700px;
+} */
+
+.item_Highlight h3{
+    
+    background-color: var(--light_Blue);
+    margin: 0px;
+    /* padding: 20px; */
+    /* font-size: var(--Mid_TextSIze); */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: var(--responsive_Midtext);
+    letter-spacing: 2px;
+    padding: 10px;
+    /* color: white; */
+    color: white;
+    text-indent: 0;
+}
+
+.item_Highlight img{
+    display: block;
+    object-fit: cover;
+    min-width: 500px;
+    max-height: 300px;
+    
+}
+.highlight_Desc{    
+    
+    /* min-width: 600; */
+    text-indent: 20px;
+    font-size:  var(--reponsive_text);
+    align-items: center;
+    
+    
+    
+}
+.highlight_Desc p {
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 
 
 
 
+
+
+/* media queries */
 @media(max-width: 450px){
     #attractions_Header{
         font-size: 1rem;
     }
+
+        
 }
-
-
-
-
-
-
+@media(max-width: 960px){
+    .item_Highlight{
+        flex-wrap: wrap;
+    }
+    .item_Highlight img{
+        justify-content: center;
+        object-fit: cover;
+        flex-grow: 1;
+        height: 100px;
+        min-width: 200px;
+    }
+}
 
 /* @media(max-width: 634px){
     #cards_Container{
