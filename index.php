@@ -3,12 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css?v=<?php echo time(); ?>"> 
     <link rel="stylesheet" href="global_Palette.css">
-    <link rel="stylesheet" href="index.css?v=<?php echo time(); ?>">
-
-
-
-    
     <title>Rave</title>
 </head>
 <body>
@@ -93,7 +89,7 @@
             </section>
         </section>
 
-        
+
         <section id="about">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2730.452022387123!2d121.09711075565221!3d14.573855914384826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7ea14ea41f1%3A0x5951aed87ce31a13!2sPasig%20Rainforest%20Park!5e0!3m2!1sen!2sph!4v1708099321575!5m2!1sen!2sph" width="100%"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="about_GMap"></iframe>
             <div id="about_DescContainer">

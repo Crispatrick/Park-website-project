@@ -1,3 +1,9 @@
+::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar-track{background-color:#dedede;}
+::-webkit-scrollbar-thumb{background-color:rgba(0, 0, 0, 0.2);}
+::-webkit-scrollbar-button{background-color:#dedede;}
+::-webkit-scrollbar-corner{background-color:black;}
+
 :root{
     /* Background colors */
     --dark_Blue: #211C6A;
@@ -9,8 +15,21 @@
     /* Text Color */
     --main_Text: white;
 
+    /* this somehow doesnt work, could be due to php behavior */
     --font_Sub: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     --font_Main:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 /* 560 width media query */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
