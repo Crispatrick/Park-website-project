@@ -10,18 +10,25 @@
 
 
 header{
+    
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
     
-    background-color: var(--light_Blue);
+    /* glassmorphism */
+    background-color: #59b5c3a8;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
     color: var(--main_Text);
     align-self: center;
 
     min-height: 50px;
 
     z-index: 5;
+    top: 0;
     
 }
 #name_Rave{

@@ -10,12 +10,24 @@
     --Smol_TextSize: 1rem;
     --reponsive_text: clamp(2px,3vw,20px); 
     --responsive_Midtext: clamp(20px,3vw,100px);
+    --responsive_Hightext: clamp(20px,4vw,100px);
+    --responsive_Image: clamp(20px,30vw,1000px);
 }
+html {
+    scroll-behavior: smooth;
+}
+
 body{
     margin: 0;
     overflow-x: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
 
 
 .hero{
@@ -95,7 +107,7 @@ body{
 }
 
 #cards_Container{
-    z-index: 5;
+    z-index: 1;
     display: flex;
     justify-content: space-evenly;
     /* align-items: start; */
@@ -188,7 +200,7 @@ body{
 /* highlight section */
 #highlights{
     /* min-height: 500px;  */
-    background: linear-gradient(180deg, rgba(116,226,145,1) 0%, rgba(239,243,150,1) 80%);
+    background: linear-gradient(180deg, rgba(116,226,145,1) 60%, rgba(239,243,150,1) 100%);
     /* background-color: var(--green); */
     /* display: flex;
     flex-direction: column; */
@@ -265,14 +277,48 @@ body{
 
 
 
+/* about section */
+#about{
+    background-color: var(--yellow);
+}
+#about_DescContainer{
+    display: flex;
+    /* height: 500px; */
+    padding: 50px;
+    font-size: 1.5rem;
+}
+#about_Header{
+    margin: 0;
+    font-size: var(--responsive_Hightext);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 5px;
+    font-weight: bolder;
+}
+#about_Image img {
+    /* height: clamp(60px, 80vw, 200px); */
+    height: var(--responsive_Image);
+}
+#about_Desc{
+    color: black;
+    font-size: var(--reponsive_text);
+}
+#about_GMap{
+    height: clamp(20px,25vw,1000px);
+}
+
+
+
+
+
+
+
+
 
 /* media queries */
 @media(max-width: 450px){
     #attractions_Header{
         font-size: 1rem;
-    }
-
-        
+    }        
 }
 @media(max-width: 960px){
     .item_Highlight{
@@ -284,6 +330,23 @@ body{
         flex-grow: 1;
         height: 100px;
         min-width: 200px;
+    }
+}
+@media(max-width: 1024px){
+    #about_DescContainer{
+        flex-direction: column;
+    }
+    #about_Image img{
+        height: clamp(20px,40vw,1000px);
+    }
+    /* #about_GMap{
+        height: 100px;
+    } */
+    #about_Image{
+        align-self: center;
+    }
+    header{
+        position: relative;
     }
 }
 
