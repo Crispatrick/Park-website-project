@@ -6,8 +6,7 @@
     <link rel="stylesheet" href="global_Palette.css">
     <link rel="stylesheet" href="index.css?v=<?php echo time(); ?>">
 
-    <!-- debug for testing -->
-    <link rel="stylesheet" href="css_Files\footer.css">
+
 
     
     <title>Rave</title>
@@ -15,7 +14,7 @@
 <body>
     <!-- for header -->
     <?php
-        include("header.html");
+        include("html_Files\\header.html");
     ?>
 
     <main>
@@ -30,9 +29,9 @@
             
             <img src="Resources\Images\aboutlogo.png" alt="" id="logo">
             <h1 id="park_Welcome">A park that is <span id="park_Welcome_Text">GUARANTEED</span> to please the whole family!</h1>  
-            
-
         </section>
+
+
         <!-- attraction Section -->
         <section class="genre" id="scroll_Attraction">
             <div id="attractions_Header">
@@ -94,6 +93,7 @@
             </section>
         </section>
 
+        
         <section id="about">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2730.452022387123!2d121.09711075565221!3d14.573855914384826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7ea14ea41f1%3A0x5951aed87ce31a13!2sPasig%20Rainforest%20Park!5e0!3m2!1sen!2sph!4v1708099321575!5m2!1sen!2sph" width="100%"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="about_GMap"></iframe>
             <div id="about_DescContainer">
@@ -116,53 +116,14 @@
                 <div id="about_Image">
                     <img src="Resources\Images\mapmarkers_BG.png" alt="">
                 </div>
-            </div>
-            
-            
-            
-            
+            </div>  
         </section>
     </main>
 
-    <footer>
-            <div id="footer_MainDesc" >
-                 <img src="Resources\Images\logo2.png" alt="" id="footer_MainLogo">
-                <div id="footer_Desc">
-                    
-                    <p>©2014 Pasig City RAVE Rainforest Adventure Experience, All Rights Reserved, City Government of Pasig</p>
-                </div>
-            </div>
 
-
-            <div>
-                <h3 class="footer_Header">
-                    Contact Us
-                </h3>
-                <p>
-                    Rainforest Admin: 642-5280
-                </p>
-                <p>
-                    Rainforest Waterpark: 628-4291
-                </p>
-                <p>
-                    Pasig City Hotline: 643-0000
-                </p>
-            </div>
-
-
-            <div>
-                <h3 class="footer_Header">Socials</h3>
-                <div id="footer_Socials">
-                    <img class="footer_Images" id="footer_ImagesSocials" src="Resources\Images\Social logo\Facebook_Logo_Secondary.png" alt="">
-                    <img class="footer_Images" id="footer_ImagesSocials" src="Resources\Images\Social logo\logo-white.png" alt="">
-                    <img class="footer_Images" id="footer_ImagesSocials" src="Resources\Images\Social logo\Instagram_Glyph_White.png" alt="">
-                </div>
-
-            </div>
-
-        <!-- [logo, logo name, allright reserve], [contact, socials, address] -->
-    </footer>
-    
+    <?php
+        include("html_Files\\footer.html");
+    ?>
 
 </body>
 </html>

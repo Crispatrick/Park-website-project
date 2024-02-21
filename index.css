@@ -315,7 +315,7 @@ header{
 
 
 /* media queries */
-@media(max-width: 450px){
+@media(max-width: 480px){
     #attractions_Header{
         font-size: 1rem;
     }        
