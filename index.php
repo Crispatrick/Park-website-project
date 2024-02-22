@@ -34,18 +34,24 @@
                 <h1>ATTRACTIONS</h1>
             </div>
             <div id="cards_Container">
-                <div class="cards">
-                    <h3>NATURE</h3>
-                    <img src="Resources\Images\attractions\bg5.jpg" alt="">
-                </div>
-                <div class="cards">
-                    <h3>LEISURE</h3>
-                    <img src="Resources\Images\attractions\ca3 cropped.jpg" alt="">
-                </div>
-                <div class="cards">
-                    <H3>ADVENTURE</H3>
-                    <img src="Resources\Images\attractions\ap3.jpg" alt="">
-                </div>
+                <a href="Nature.php">
+                    <div class="cards">
+                        <h3>NATURE</h3>
+                        <img src="Resources\Images\attractions\bg5.jpg" alt="">
+                    </div>
+                </a>
+                <a href="leisure.php">
+                    <div class="cards">
+                        <h3>LEISURE</h3>
+                        <img src="Resources\Images\attractions\ca3 cropped.jpg" alt="">
+                    </div>
+                </a>
+                <a href="">
+                    <div class="cards">
+                        <H3>ADVENTURE</H3>
+                        <img src="Resources\Images\attractions\ap3.jpg" alt="">
+                    </div>
+                </a>
             </div>
 
             <section id="highlights">
