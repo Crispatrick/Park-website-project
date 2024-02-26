@@ -1,0 +1,45 @@
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#desc{
+    background-color: var(--yellow);
+}
+#solo_Attraction{
+    display: flex;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+#description{
+    max-width: 55%;
+}
+#description h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 10px;
+    /* color: var(--light_Blue); */
+    font-size: 2.5rem;
+    color: white;
+    text-shadow: 5px 5px 0px black, 0px 0px 5px black;
+    margin: 0;
+}
+#solo_Attraction div{
+    padding: 25px;
+}
+#rates{
+    font-size: 1.3rem;
+    background-color: var(--green);
+    min-width: 30%;
+    color: rgb(28, 20, 48);
+    border-radius: 50px 0px 0px 50px;
+    align-self: center;
+}
+#rates h4{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(248, 248, 248);
+    font-size: 2rem;
+    text-shadow: 0px 0px 5px black;
+    margin: 0;
+    letter-spacing: 3px;
+}

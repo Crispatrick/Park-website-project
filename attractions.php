@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="global_Palette.css">
-    <link rel="stylesheet" href="css_Files\nature.css">
+    <link rel="stylesheet" href="css_Files\attractions.css">
+    <link rel="stylesheet" href="css_files\cards.css">
     <title>Rave</title>
 </head>
 <body>
@@ -22,15 +23,17 @@
             <div id="cards">
                 <div id="cards_Children">
                     <div class="cards_Desc">Botanical Garden</div>
-                    <img src="Resources\Images\Nature\botanical_Garden\bg1.jpg" alt="">
+                    <a href="botanical_Garden.php">
+                        <img src="Resources\Images\Nature\botanical_Garden\bg1.jpg" alt="">
+                    </a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Flower Park</div>
-                    <img src="Resources\Images\Nature\flower_Park\fp1.jpg" alt="">
+                    <a href="flower_Park.php"><img src="Resources\Images\Nature\flower_Park\fp1.jpg" alt=""></a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Pasig Zoo</div>
-                    <img src="Resources\Images\Nature\Pasig_Zoo\pz1.jpg" alt="">
+                    <a href="pasig_Zoo.php"><img src="Resources\Images\Nature\Pasig_Zoo\pz1.jpg" alt=""></a>
                 </div>
             </div>
         </section>
