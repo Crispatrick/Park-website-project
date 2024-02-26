@@ -34,19 +34,19 @@
                 <h1>ATTRACTIONS</h1>
             </div>
             <div id="cards_Container">
-                <a href="Nature.php">
+                <a href="attractions.php #nature_Scroll">
                     <div class="cards">
                         <h3>NATURE</h3>
                         <img src="Resources\Images\attractions\bg5.jpg" alt="">
                     </div>
                 </a>
-                <a href="leisure.php">
+                <a href="attractions.php #leisure_Scroll">
                     <div class="cards">
                         <h3>LEISURE</h3>
                         <img src="Resources\Images\attractions\ca3 cropped.jpg" alt="">
                     </div>
                 </a>
-                <a href="">
+                <a href="attractions.php #adventure_Scroll">
                     <div class="cards">
                         <H3>ADVENTURE</H3>
                         <img src="Resources\Images\attractions\ap3.jpg" alt="">
