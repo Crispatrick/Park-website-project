@@ -47,31 +47,31 @@
             <div id="cards">
                 <div id="cards_Children">
                     <div class="cards_Desc">Mini Train</div>
-                    <img src="Resources\Images\Leisure\Mini_Train_Station\ms1.jpg" alt="">
+                    <a href="train.php"><img src="Resources\Images\Leisure\Mini_Train_Station\ms1.jpg" alt=""></a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Boating Lagoon</div>
-                    <img src="Resources\Images\Leisure\boating_Lagoon\bl1.jpg" alt="">
+                    <a href="boat.php"><img src="Resources\Images\Leisure\boating_Lagoon\bl1.jpg" alt=""></a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Camping Area</div>
-                    <img src="Resources\Images\Leisure\Camping Area\ca2.jpg" alt="">
+                    <a href="camp.php"><img src="Resources\Images\Leisure\Camping Area\ca2.jpg" alt=""></a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Picnic Grove</div>
-                    <img src="Resources\Images\Leisure\Picnic_Grove\pg1.jpg" alt="">
+                    <a href="picnic.php"><img src="Resources\Images\Leisure\Picnic_Grove\pg1.jpg" alt=""></a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Promenade Area</div>
-                    <img src="Resources\Images\Leisure\Promenade_Area\pa1.jpg" alt="">
+                    <a href="prom_Area.php"><img src="Resources\Images\Leisure\Promenade_Area\pa1.jpg" alt=""></a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Rave Amphitheater</div>
-                    <img src="Resources\Images\Leisure\Rave_Amphitheater\amp1.jpg" alt="">
+                    <a href="rave_Amphi.php"><img src="Resources\Images\Leisure\Rave_Amphitheater\amp1.jpg" alt=""></a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Water Park</div>
-                    <img src="Resources\Images\Leisure\Water_Park\wp1.jpg" alt="">
+                    <a href="water_Park.php"><img src="Resources\Images\Leisure\Water_Park\wp1.jpg" alt=""></a>
                 </div>
             </div>
         </section>

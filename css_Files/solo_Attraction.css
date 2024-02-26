@@ -23,6 +23,7 @@ body{
     color: white;
     text-shadow: 5px 5px 0px black, 0px 0px 5px black;
     margin: 0;
+    text-transform: uppercase;
 }
 #solo_Attraction div{
     padding: 25px;
