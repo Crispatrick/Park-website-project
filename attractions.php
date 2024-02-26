@@ -86,24 +86,24 @@
 
             <div id="cards">
                 <div id="cards_Children">
-                    <div class="cards_Desc">Court</div>
-                    <img src="Resources\Images\Adventure\Court\tb1.jpg" alt="">
+                    <div class="Adventure_cards_Desc">Court</div>
+                    <a href="Adventure_court.php"><img src="Resources\Images\Adventure\Court\tb1.jpg" alt=""></a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Adventure Park</div>
-                    <img src="Resources\Images\Adventure\Adventure_Park\ap5.jpg"alt="">
+                    <a href="Adventure_adventure.php"><img src="Resources\Images\Adventure\Adventure_Park\ap5.jpg"alt=""></a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Fitness Center</div>
-                    <img src="Resources\Images\Adventure\Fitness_Center\fc1.jpg" alt="">
+                    <a href="Adventure_fit.php"><img src="Resources\Images\Adventure\Fitness_Center\fc1.jpg" alt=""></a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Kiddie Playland</div>
-                    <img src="Resources\Images\Adventure\Kiddie_Playland\kp1.jpg" alt="">
+                    <a href="Adventure_play.php"><img src="Resources\Images\Adventure\Kiddie_Playland\kp1.jpg" alt=""></a>
                 </div>
                 <div id="cards_Children">
                     <div class="cards_Desc">Maze Garden</div>
-                    <img src="Resources\Images\Adventure\Maze_Garden\mg2.jpg" alt="">
+                    <a href="Adventure_maze.php"><img src="Resources\Images\Adventure\Maze_Garden\mg2.jpg" alt=""></a>
                 </div>
             </div>
         </section>

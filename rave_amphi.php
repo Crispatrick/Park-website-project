@@ -19,21 +19,20 @@
         <section>
             <div id="cards">
                 <div id="cards_Children">
-                    <img src="Resources\Images\Leisure\Water_Park\wp1.jpg" alt="">
+                    <img src="Resources\Images\Leisure\Rave_Amphitheater\amp1.jpg" alt="">
                 </div>
                 <div id="cards_Children">
-                    <img src="Resources\Images\Leisure\Water_Park\wp2.jpg" alt="">
+                    <img src="Resources\Images\Leisure\Rave_Amphitheater\amp2.jpg" alt="">
                 </div>
                 <div id="cards_Children">
-                    <img src="Resources\Images\Leisure\Water_Park\wp3.jpg" alt="">
+                    <img src="Resources\Images\Leisure\Rave_Amphitheater\amp3.jpg" alt="">
                 </div>
                 <div id="cards_Children">
-                    <img src="Resources\Images\Leisure\Water_Park\wp4.jpg" alt="">
+                    <img src="Resources\Images\Leisure\Rave_Amphitheater\amp4.jpg" alt="">
                 </div>
                 <div id="cards_Children">
-                    <img src="Resources\Images\Leisure\Water_Park\wp5.jpg" alt="">
+                    <img src="Resources\Images\Leisure\Rave_Amphitheater\amp5.jpg" alt="">
                 </div>
-
             </div>
         </section>
 
