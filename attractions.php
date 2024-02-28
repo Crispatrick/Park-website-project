@@ -86,7 +86,7 @@
 
             <div id="cards">
                 <div id="cards_Children">
-                    <div class="Adventure_cards_Desc">Court</div>
+                    <div class="cards_Desc">Basketball Court</div>
                     <a href="Adventure_court.php"><img src="Resources\Images\Adventure\Court\tb1.jpg" alt=""></a>
                 </div>
                 <div id="cards_Children">

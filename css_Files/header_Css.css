@@ -245,7 +245,7 @@ a{
 
 
 
-#btnBooking{
+.btnBooking{
     text-decoration: none;
     text-align: center;
     
@@ -277,7 +277,7 @@ a{
     /* border-radius: var(--header_border_Radius); */
 }
 
-#btnBooking:hover{
+.btnBooking:hover{
     transition: var(--fadeIn);
     background-color: var(--dark_Blue);
     cursor: pointer;
@@ -287,7 +287,7 @@ a{
 
     box-shadow: 0px 0px 0px 3px var(--light_Blue);        */
 }
-#btnBooking:active{
+.btnBooking:active{
     transition: 0.1;   
     transform: translateY(3px);
 }

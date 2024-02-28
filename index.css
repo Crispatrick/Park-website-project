@@ -43,10 +43,12 @@ header{
 #logo{
     object-fit: contain;  
     overflow-x: hidden;
+    transition: 1s;  
 }
 #logo:hover{
-    width: 400px;
-    cursor: pointer;    
+    transform: scale(1.2);
+    cursor: pointer;  
+    transition: 0.5s;  
 }
 
 #park_Welcome{
@@ -67,7 +69,12 @@ header{
     white-space: nowrap;
     overflow: hidden;
     animation: typing 1s;
+    transition: 1s;  
 }
+/* #park_Welcome_Text:hover{
+    transform: scale(1.2);
+    transition: 0.5s;  
+} */
 @keyframes typing{
     from{
         opacity: 0;
