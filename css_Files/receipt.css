@@ -1,0 +1,107 @@
+body{
+    background-image: url("..\\Resources\\Images\\Iina.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#receipt{
+
+    margin: 100px;
+    
+
+    color: white;
+
+    /* glassmorphism */
+    background-color: #59b5c3a8;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    font-size: 1.5rem;
+
+    padding-left: 50px;
+    padding-right: 50px;
+
+    /* outline: 2px solid black; */
+    text-shadow: 2px 2px 0px black;
+    box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.562);
+}
+#receipt_Header{
+    margin: 0;
+    padding: 20px;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+}
+
+.personal_Info{
+display: block;
+}
+#personal_InfoCon{
+    display: flex;
+    justify-content: space-around;
+}
+#booked{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#btnCon{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.btnBooking{
+    text-decoration: none;
+    text-align: center;
+    
+    /* padding-right: var(--btn_Padding);
+    padding-left: var(--btn_Padding); */
+
+    
+    min-width: 50px;
+    min-height: 40px;
+    transition: var(--fadeOut);
+    text-transform: uppercase;
+
+    
+
+    background-color: var(--dark_Blue);
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* border-radius: 10px; */
+    text-decoration: none;
+    letter-spacing: 3px;
+
+    background-color: rgba(255, 255, 255, 0); 
+    color: rgb(255, 255, 255); 
+
+    border: none;
+    border: 2px solid var(--dark_Blue); 
+    margin: 5px;
+    /* flex-grow: 1;
+    /* border-radius: var(--header_border_Radius); */
+    display: block;
+}
+
+
+
+.btnBooking:hover{
+    transition: var(--fadeIn);
+    background-color: var(--dark_Blue);
+    cursor: pointer;
+   
+    /* transform: translatey(15px);
+    border-radius: var(--header_border_Radius);
+
+    box-shadow: 0px 0px 0px 3px var(--light_Blue);        */
+}
+.btnBooking:active{
+    transition: 0.1;   
+    transform: translateY(3px);
+}
