@@ -21,7 +21,7 @@ header{
     display: flex;
     position: relative;
     min-height: var(--section_Height);
-    background-image: linear-gradient(25deg, rgba(33, 28, 106, 0.671) 50%, rgba(33,28,106,0) 90%);
+    background-image: linear-gradient(25deg, #142015b6 50%, rgba(33,28,106,0) 90%);
     align-self: center;
     flex-wrap: wrap; 
     
@@ -94,7 +94,7 @@ header{
 /* genre section css */
 .genre{
     min-height: calc(var(--section_Height) - 100px);
-    background-color: var(--green);    
+    background-color: var(--light_Blue);    
     display: flex;
     /* justify-content: center; */
     flex-direction: column;
@@ -194,8 +194,8 @@ header{
 /* highlight section */
 #highlights{
     /* min-height: 500px;  */
-    background: linear-gradient(180deg, rgba(116,226,145,1) 60%, rgba(239,243,150,1) 100%);
-    /* background-color: var(--green); */
+    /* background: linear-gradient(180deg, rgba(116,226,145,1) 60%, rgba(239,243,150,1) 100%); */
+    background-color: var(--green);
     /* display: flex;
     flex-direction: column; */
     padding: 50px;
@@ -273,7 +273,8 @@ header{
 
 /* about section */
 #about{
-    background-color: var(--yellow);
+    
+    background-color: var(--light_Blue);
 }
 #about_DescContainer{
     display: flex;
@@ -293,7 +294,7 @@ header{
     height: var(--responsive_Image);
 }
 #about_Desc{
-    color: black;
+    color: white;
     font-size: var(--reponsive_text);
 }
 #about_GMap{

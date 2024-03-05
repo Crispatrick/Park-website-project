@@ -3,7 +3,7 @@ body{
 
 }
 #desc{
-    background-color: var(--yellow);
+    background-color: var(--green);
 }
 #solo_Attraction{
     display: flex;
@@ -30,7 +30,7 @@ body{
 }
 #rates{
     font-size: 1.3rem;
-    background-color: var(--green);
+    background-color: var(--yellow);
     min-width: 30%;
     color: rgb(28, 20, 48);
     border-radius: 50px 0px 0px 50px;

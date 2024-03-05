@@ -6,14 +6,26 @@
 
 :root{
     /* Background colors */
-    --dark_Blue: #211C6A;
+    /* --dark_Blue: #211C6A;
     --dark_Blue_With_Opacity: #211c6a73;
     --light_Blue: #59B4C3;
     --green: #74E291;
-    --yellow: #EFF396;
+    --yellow: #EFF396; */
+
+    /* --dark_Blue_With_Opacity: #211c6a73; */
+    /* --dark_Blue: #D0E7D2;
+    --light_Blue: #B0D9B1;
+    --green: #79AC78; 
+    --yellow: #618264; */
+
+    --dark_Blue: #618264;
+    --light_Blue: #79AC78;
+    --green: #B0D9B1; 
+    --yellow: #D0E7D2;
 
     /* Text Color */
-    --main_Text: white;
+    --main_Text: black;
+    --secondary_Text: white;
 
     /* this somehow doesnt work, could be due to php behavior */
     --font_Sub: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

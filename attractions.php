@@ -17,7 +17,7 @@
     <main>
         <section id="nature_Scroll">
             <div id="attraction_Header">
-                <img class="attration_HeaderImage" src="Resources/Images/attractions_Header/Fauna.jpg" alt="">
+                <img class="attration_HeaderImage" src="Resources\Images\Nature\catherine-kay-greenup-aZgn7P2KFx4-unsplash.jpg" alt="">
                 <div id="attraction_HeaderDesc">NATURE</div>
             </div>
             <div id="cards">
@@ -41,7 +41,7 @@
 
         <section id="leisure_Scroll">
             <div id="attraction_Header">
-                <img class="attration_HeaderImage leisure" src="Resources/Images/attractions_Header/Okayu.jpg" alt="">
+                <img class="attration_HeaderImage leisure" src="Resources\Images\Leisure\trend-341OczdirBM-unsplash.jpg" alt="">
                 <div id="attraction_HeaderDesc">LEISURE</div>
             </div>
             <div id="cards">
@@ -79,7 +79,7 @@
 
         <section id="adventure_Scroll">
             <div id="attraction_Header">
-                <img class="attration_HeaderImage" src="Resources\Images\attractions_Header\Marine.jpg" alt="">
+                <img class="attration_HeaderImage" src="Resources\Images\Adventure\nathan-cima-gH5mpNXWI8o-unsplash.jpg" alt="">
                 <div id="attraction_HeaderDesc">ADVENTURE</div>
             </div>
 
