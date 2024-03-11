@@ -40,7 +40,7 @@
                                 }
                             echo "<div>" . $_POST["schedule"] . "</div>";
 
-                                if (isset( $_POST["phone"]) && !empty( $_POST["phone"])) {
+                                if (isset( $_POST["pasigueno"]) && !empty( $_POST["pasigueno"])) {
                                     echo "<div>" . $_POST["pasigueno"] . "</div>"; 
                                 }else {
                                     echo "<div>" . "Not Available" . "</div>";
@@ -62,6 +62,11 @@
                     $nature;
                     $leisure;
                     $adventure;
+
+                    $init_Value;
+                    $sum = 0;
+
+
                     if (isset($_POST["nature_Checkbox"])) {
                         $nature = $_POST["nature_Checkbox"];
                     }
@@ -78,38 +83,100 @@
 
 
                     // showing variables
-                    echo "<h3 id=\"receipt_Header\">You Booked!</h3>";
+                    echo "<h3 id=\"receipt_Header\">Booked:</h3>";
 
                     echo "<div id=\"booked\">";
                     // nature booking
                     if (!empty($nature)) {
-                        echo "<div>";
-                        echo "<ul id=\"receipt_Header\">Nature</ul>";
+                        echo "<div> <div id=\"receipt_Header\">Nature</div>";
+                        echo "<ol>";
                         foreach ($nature as $natures) {
-                            echo "<li>" . $natures . "</li>";
+                            switch ($natures) {
+                                case 'Butterfly Pavillion':
+                                    if ($_POST["pasigueno"] == "pasigueno") {
+                                        $init_Value = 10;
+                                        $sum += $init_Value;
+                                    }else {
+                                        $init_Value = 20;
+                                        $sum += $init_Value;
+                                    }
+                                    
+                                    
+                                    break;
+                                case 'Flower Park':
+                                    if ($_POST["pasigueno"] == "pasigueno") {
+                                        $init_Value = 10;
+                                        $sum += $init_Value;
+                                    }else {
+                                        $init_Value = 20;
+                                        $sum += $init_Value;
+                                    }
+                                    break;
+                                case 'Pasig Zoo':
+                                    if ($_POST["pasigueno"] == "pasigueno") {
+                                        $init_Value = 10;
+                                        $sum += $init_Value;
+                                    }else {
+                                        $init_Value = 20;
+                                        $sum += $init_Value;
+                                    }
+                                    break;
+                                
+                                default:
+                                    # code...
+                                    break;
+                            }
+
+                            echo "<li>" . $natures . " - " . $init_Value. "₱</li>";
+                            $init_Value = 0;
                         }
-                        echo "</div>";
+                        echo "</ol></div>";
                     }
 
                     // laisure booking
                     if (!empty($leisure)) {
-                        echo "<div>";
-                        echo "<ul id=\"receipt_Header\">Leisure</ul>";
+                        echo "<div> <div id=\"receipt_Header\">Leisure</div>";
+                        echo "<ol>";
                         foreach ($leisure as $leisures) {
-                            echo "<li>" . $leisures . "</li>";
+                            switch ($leisures) {
+                                case 'Rapid Rides':
+                                    if ($_POST["pasigueno"] == "pasigueno") {
+                                        $init_Value = 30;
+                                        $sum += $init_Value;
+                                    }else {
+                                        $init_Value = 50;
+                                        $sum += $init_Value;
+                                    }
+                                    break;
+                                case 'Waterpark Pavillion':
+                                    $init_Value = 2000;
+                                    $sum += $init_Value;
+                                    break;
+                                case 'Amphitheater':
+                                    $init_Value = 2000;
+                                    $sum += $init_Value;
+                                    break;
+                                
+                                default:
+                                    # code...
+                                    break;
+                            }
+
+                            echo "<li>" . $leisures ." - " . $init_Value.  "₱</li>";
+                            $init_Value = 0;
                         }
-                        echo "</div>";
+                        echo "</ol></div>";
                     }
 
 
                     // adventure booking
                     if (!empty($adventure)) {
-                        echo "<div>";
-                        echo "<ul id=\"receipt_Header\">Adventure</ul>";
+                        echo "<div> <div id=\"receipt_Header\">Adventure</div>";
+                        echo "<ol>";
                         foreach ($adventure as $adventures) {
                             echo "<li>" . $adventures . "</li>";
                         }
-                        echo "</div>";
+                        echo "</ol></div>";
                     }
                     echo "</div>";
 
@@ -121,7 +188,7 @@
 
                 echo "<hr style=\"width:100%;text-align:left;margin-left:0;\">";
                 if (isset($_POST["cards"])) {
-                    echo "<h5 style=\"text-align:center; margin:0;\">Payments is via {$_POST["cards"]}</h5>";
+                    echo "<h5 style=\"text-align:center; margin:0;\">Total payment is {$sum}₱ via {$_POST["cards"]}</h5>";
                 } else {
                     echo "San ka mag babayad Idol?";
                 }
