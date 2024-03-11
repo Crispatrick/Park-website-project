@@ -19,7 +19,7 @@
     <section id="container">
         <!-- booking informations - needs to be toggled -->
         <form action="receipt.php" method="post" target="_blank" id="form">
-            <section id="form">
+            <section class="test" id="form" >
                 <section id="user_Info" class="form_Sections">
                     <div class="inputs">
                         <label for="fname">First Name:</label>
@@ -100,166 +100,182 @@
 
 
             <section id="info">
-                <section>
-                    <button class="accordion bypassButton" >
-                        <input type="checkbox" name="nature_Checkbox[]" id="Butterfly_Pavillion" value="Butterfly Pavillion" class="checkbox" >
-                        <label for="Butterfly_Pavillion">Butterfly Pavillion</label>
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>Pasigueños (one-entry) - 10.00Php</li>
-                            <li>Non-Pasigueños (one-entry) - 20.00Php</li>
-                        </ul>
-                    </div>
+                <section id="nature">
+                    <section>
+                        <button class="accordion bypassButton" >
+                            <input type="checkbox" name="nature_Checkbox[]" id="Butterfly_Pavillion" value="Butterfly Pavillion" class="checkbox" >
+                            <label for="Butterfly_Pavillion">Butterfly Pavillion</label>
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>Pasigueños (one-entry) - 10.00Php</li>
+                                <li>Non-Pasigueños (one-entry) - 20.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <button class="accordion bypassButton">
+                            <input type="checkbox" name="nature_Checkbox[]" value="Flower Park" id="flower_Park" class="checkbox">
+                            <label for="flower_Park">Flower Park</label>
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>Pasigueños (one-entry) - 10.00Php</li>
+                                <li>Non-Pasigueños (one-entry) - 20.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section>
+                        <button class="accordion bypassButton">
+                            <input type="checkbox" name="nature_Checkbox[]" value="Pasig Zoo" id="pasig_Zoo" class="checkbox">
+                            <label for="pasig_Zoo">Pasig Zoo</label>
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>Pasigueños (one-entry) - 10.00Php</li>
+                                <li>Non-Pasigueños (one-entry) - 20.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    
+                    <div id="Bookmark" onmouseover="moveParent()"></div>
+
+
+
                 </section>
 
-                <section>
-                    <button class="accordion bypassButton">
-                        <input type="checkbox" name="nature_Checkbox[]" value="Flower Park" id="flower_Park" class="checkbox">
-                        <label for="flower_Park">Flower Park</label>
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>Pasigueños (one-entry) - 10.00Php</li>
-                            <li>Non-Pasigueños (one-entry) - 20.00Php</li>
-                        </ul>
-                    </div>
-                </section>
 
-
-                <section>
-                    <button class="accordion bypassButton">
-                        <input type="checkbox" name="nature_Checkbox[]" value="Pasig Zoo" id="pasig_Zoo" class="checkbox">
-                        <label for="pasig_Zoo">Pasig Zoo</label>
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>Pasigueños (one-entry) - 10.00Php</li>
-                            <li>Non-Pasigueños (one-entry) - 20.00Php</li>
-                        </ul>
-                    </div>
-                </section>
 
                 
-
-
-                <section>
-                    <button class="accordion bypassButton">
-                        <input type="checkbox" name="leisure_Checkbox[]" value="Rapid Rides" id="Rapid_Rides" class="checkbox">
-                        <label for="Rapid_Rides">Rapid Rides</label>
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>Pasigueños (one-way) - 30.00Php</li>
-                            <li>Non-Pasigueños (one-way) - 50.00Php</li>
-                        </ul>
-                    </div>
+                <section id="leisure">
+                    <section>
+                        <button class="accordion bypassButton">
+                            <input type="checkbox" name="leisure_Checkbox[]" value="Rapid Rides" id="Rapid_Rides" class="checkbox">
+                            <label for="Rapid_Rides">Rapid Rides</label>
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>Pasigueños (one-way) - 30.00Php</li>
+                                <li>Non-Pasigueños (one-way) - 50.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
+    
+                    <section>
+                        <button class="accordion bypassButton">
+                             <input type="checkbox" name="leisure_Checkbox[]" value="Waterpark Pavillion" id="Water_Park" class="checkbox">
+                            <label for="Water_Park">Waterpark Pavillion</label>
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>1st 3 Hours - 2,000.00Php</li>
+                                <li>Per succeeding hour/s - 500.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
+    
+                    <section>
+                        <button class="accordion bypassButton">
+                             <input type="checkbox" name="leisure_Checkbox[]" value="Amphitheater" id="Amphitheater" class="checkbox">
+                            <label for="Amphitheater">Amphitheater</label>
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>1st 3 Hours - 2,000.00Php</li>
+                                <li>Per succeeding hour/s - 5,000.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
+    
+                    <section>
+                        <button class="accordion bypassButton">
+                            <input type="checkbox" name="leisure_Checkbox[]" value="Picnic Ground" id="Picnic_Ground" class="checkbox">
+                                    <label for="Picnic_Ground">Picnic Ground</label>
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>1st 3 Hours - 200.00Php</li>
+                                <li>Per succeeding hour/s - 100.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
+    
+    
+                    <section>
+                        <button class="accordion bypassButton">
+                             <input type="checkbox" name="leisure_Checkbox[]" value="Mini Train" id="Mini_Train" class="checkbox">
+                                    <label for="Mini_Train">Mini Train</label>
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>Pasigueños - 10.00Php</li>
+                                <li>Non-Pasigueños - 20.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
+                
+                
+                    <section>
+                        <button class="accordion bypassButton">
+                            <input type="checkbox" name="leisure_Checkbox[]" value="Boat Rental" id="Boat_Rental" class="checkbox">
+                                <label for="Boat_Rental">Boat Rental</label> 
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>Pasigueños - 40.00Php</li>
+                                <li>Non-Pasigueños - 50.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
+                
+                    <div id="Bookmark" onmouseover="moveParent_lei()" style="background-color: var(--B_dark_Blue);"></div>
                 </section>
 
-                <section>
-                    <button class="accordion bypassButton">
-                         <input type="checkbox" name="leisure_Checkbox[]" value="Waterpark Pavillion" id="Water_Park" class="checkbox">
-                        <label for="Water_Park">Waterpark Pavillion</label> 
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>1st 3 Hours - 2,000.00Php</li>
-                            <li>Per succeeding hour/s - 500.00Php</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section>
-                    <button class="accordion bypassButton">
-                         <input type="checkbox" name="leisure_Checkbox[]" value="Amphitheater" id="Amphitheater" class="checkbox">
-                        <label for="Amphitheater">Amphitheater</label>
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>1st 3 Hours - 2,000.00Php</li>
-                            <li>Per succeeding hour/s - 5,000.00Php</li>
-                        </ul>
-                    </div>
-                </section>
 
 
-                <!-- this is the multiple iteration -->
-                <section>
-                    <button class="accordion bypassButton">
-                        <input type="checkbox" name="leisure_Checkbox[]" value="Picnic Ground" id="Picnic_Ground" class="checkbox">
-                                <label for="Picnic_Ground">Picnic Ground</label>
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>1st 3 Hours - 200.00Php</li>
-                            <li>Per succeeding hour/s - 100.00Php</li>
-                        </ul>
-                    </div>
-                </section>
 
 
-                <section>
-                    <button class="accordion bypassButton">
-                         <input type="checkbox" name="leisure_Checkbox[]" value="Mini Train" id="Mini_Train" class="checkbox">
-                                <label for="Mini_Train">Mini Train</label>
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>Pasigueños - 10.00Php</li>
-                            <li>Non-Pasigueños - 20.00Php</li>
-                        </ul>
-                    </div>
-                </section>
+                <section id="adventure">
+                    <section>
+                        <button class="accordion bypassButton">
+                             <input type="checkbox" name="adventure_Checkbox[]" value="MAZE Garden" id="MAZE_Garden" class="checkbox">
+                            <label for="MAZE_Garden">MAZE Garden</label>
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>Non-Pasigueños or Pasigueños (one-entry) - 10.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
+    
+                    <section>
+                        <button class="accordion bypassButton">
+                             <input type="checkbox" name="adventure_Checkbox[]" value="Zip Line" id="Zip_Line" class="checkbox">
+                            <label for="Zip_Line">Zip Line</label>
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>Pasigueños - 80.00Php </li>
+                                <li>Non-Pasigueños - 130.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
+    
+                    <section>
+                        <button class="accordion bypassButton">
+                            <input type="checkbox" name="adventure_Checkbox[]" value="Obstacles Courses" id="Obstacles" class="checkbox">
+                            <label for="Obstacles">Obstacles Courses</label>
+                        </button>
+                        <div class="panel">
+                            <ul>
+                                <li>Pasigueños (3 Hours) - 100.00Php <br> Per succeeding hour/s - 50.00Php</li>
+                                <li>Non-Pasigueños (3 Hours) - 150.00Php <br> Per succeeding hour/s - 50.00Php</li>
+                            </ul>
+                        </div>
+                    </section>
 
-                <section>
-                    <button class="accordion bypassButton">
-                        <input type="checkbox" name="leisure_Checkbox[]" value="Boat Rental" id="Boat_Rental" class="checkbox">
-                            <label for="Boat_Rental">Boat Rental</label> 
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>Pasigueños - 40.00Php</li>
-                            <li>Non-Pasigueños - 50.00Php</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section>
-                    <button class="accordion bypassButton">
-                         <input type="checkbox" name="adventure_Checkbox[]" value="MAZE Garden" id="MAZE_Garden" class="checkbox">
-                        <label for="MAZE_Garden">MAZE Garden</label>
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>Non-Pasigueños or Pasigueños (one-entry) - 10.00Php</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section>
-                    <button class="accordion bypassButton">
-                         <input type="checkbox" name="adventure_Checkbox[]" value="Zip Line" id="Zip_Line" class="checkbox">
-                        <label for="Zip_Line">Zip Line</label>
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>Pasigueños - 80.00Php </li>
-                            <li>Non-Pasigueños - 130.00Php</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section>
-                    <button class="accordion bypassButton">
-                        <input type="checkbox" name="adventure_Checkbox[]" value="Obstacles Courses" id="Obstacles" class="checkbox">
-                        <label for="Obstacles">Obstacles Courses</label>
-                    </button>
-                    <div class="panel">
-                        <ul>
-                            <li>Pasigueños (3 Hours) - 100.00Php <br> Per succeeding hour/s - 50.00Php</li>
-                            <li>Non-Pasigueños (3 Hours) - 150.00Php <br> Per succeeding hour/s - 50.00Php</li>
-                        </ul>
-                    </div>
+                    <div id="Bookmark" onmouseover="moveParent_ad()";  style="background-color: var(--B1_dark_Blue);"></div>
                 </section>
 
 

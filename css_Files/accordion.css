@@ -1,5 +1,6 @@
 .accordion {
-    background-color: var(--light_Blue);
+    /* background-color: var(--light_Blue); */
+    background-color: #70a375;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -12,6 +13,7 @@
     letter-spacing: 2px;
     text-transform: capitalize;
     
+    padding-left: 35px;
 }
 
 .active, .accordion:hover {
@@ -40,6 +42,7 @@ content: "\2212";
 .panel {
 padding: 0 18px;
 background-color: var(--dark_Blue);
+
 color: white;
 max-height: 0;
 overflow: hidden;

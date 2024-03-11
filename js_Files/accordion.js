@@ -112,4 +112,33 @@ function validateForm() {
   }
 }
 
- 
+
+
+
+//css doesnt have a built in function that change the posistion of a parent via child, so there you have it. a js function that maniputes the parent
+
+left_move = 460;
+
+function moveParent() {
+  var parent = document.getElementById('nature');
+
+  parent.style.left = left_move + 'px'; // Adjust the value as needed
+  parent.addEventListener('mouseleave', function() {
+      parent.style.left = '140px'; // Return parent to original position when mouse leaves
+  });
+}
+function moveParent_ad() {
+  var parent = document.getElementById('adventure');
+  
+  parent.style.left = left_move + 'px'; // Adjust the value as needed
+  parent.addEventListener('mouseleave', function() {
+      parent.style.left = '140px'; // Return parent to original position when mouse leaves
+  });
+}
+function moveParent_lei() {
+  var parent = document.getElementById('leisure');
+  parent.style.left = left_move + 'px'; // Adjust the value as needed
+  parent.addEventListener('mouseleave', function() {
+      parent.style.left = '140px'; // Return parent to original position when mouse leaves
+  });
+}
