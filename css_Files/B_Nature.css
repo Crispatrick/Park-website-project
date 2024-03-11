@@ -1,0 +1,97 @@
+::placeholder {
+    color: white;
+    
+}
+body{
+    background-image: url(..\\Resources\\booking_BG\\butterfly_v1.jpg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-attachment: fixed;
+    background-size:cover;
+    
+}
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(25deg, #14201569 30%, rgba(33,28,106,0) 80%);
+    /* backdrop-filter: blur(2px);  */
+    z-index: -1;
+}
+  
+#main{
+    display: flex;
+    /* align-items: center; */
+    /* background-color: white; */
+    
+
+    margin-top: 80px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    min-height: 600px;
+
+    
+
+}
+
+
+
+#user_Info{
+    display: flex;
+    flex-direction: column;
+    
+
+    max-width: 400px;
+    gap: 10px;
+    padding: 30px;
+    
+
+    background-color: var(--light_Blue);
+    color: white;
+
+}
+
+.inputs{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+
+    font-size: 1.3rem;
+
+}
+
+
+#pasigueno{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 180px;
+    font-size: 1rem;
+    
+}
+
+.types_Size{
+
+    width: 250px;
+    height: 40px;
+    padding: 0px;
+}
+.types_Decor{
+    border-radius: 10px;
+    border-style: none;
+    text-align: center;
+
+    background-color: var(--dark_Blue);
+    color: white;
+    color-scheme: dark;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-evenly;
+}

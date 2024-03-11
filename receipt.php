@@ -21,6 +21,7 @@
                     <div>Email: </div>
                     <div>Contact: </div>
                     <div>Schedule: </div>
+                    <div>Pasigueño: </div>
                 </section>
                 <section class="personal_Info">
                     <?php
@@ -38,6 +39,14 @@
                                     echo "<div>" . "Not Available" . "</div>";
                                 }
                             echo "<div>" . $_POST["schedule"] . "</div>";
+
+                                if (isset( $_POST["phone"]) && !empty( $_POST["phone"])) {
+                                    echo "<div>" . $_POST["pasigueno"] . "</div>"; 
+                                }else {
+                                    echo "<div>" . "Not Available" . "</div>";
+                                }
+
+                            
                         } else {
                             echo "di gumagana par";
                         }
@@ -48,10 +57,11 @@
 
             <?php
                 if (isset($_POST["nature_Checkbox"]) || isset($_POST["leisure_Checkbox"]) || isset($_POST["adventure_Checkbox"])) {
+                    
+                    // initializing variables
                     $nature;
                     $leisure;
                     $adventure;
-
                     if (isset($_POST["nature_Checkbox"])) {
                         $nature = $_POST["nature_Checkbox"];
                     }
@@ -67,6 +77,7 @@
                     
 
 
+                    // showing variables
                     echo "<h3 id=\"receipt_Header\">You Booked!</h3>";
 
                     echo "<div id=\"booked\">";

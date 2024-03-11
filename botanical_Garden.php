@@ -42,6 +42,7 @@
                 <div id="description">
                     <h2>BOTANICAL GARDEN</h2>
                     <p>RAVE caters different varieties of butterfly and moth species. They also display the life cycle of a butterfly. Before you leave the butterfly house, the grotto of “Our Lady of Mediatrix” awaits you.</p>
+                    
                 </div>
                 <div id="rates">
                     <h4>Butterfly Pavilion</h4>
@@ -49,6 +50,11 @@
                         <li>Pasigueños (one-entry) - 10.00Php</li>
                         <li>Non-Pasigueños (one-entry) - 20.00Php</li>
                     </ul>
+
+                    <!-- button link for booking page -->
+                    <div style="padding: 0px; display:flex;justify-content:end">
+                        <input style="letter-spacing: 2px; padding: 5px; font-size:1.3rem" class="btnBooking" type="submit" value="BOOK" name="confirm" onClick="window.location.href='B_Nature_Butterfly.php'">
+                    </div>
                 </div>         
             </div>
 

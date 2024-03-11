@@ -1,0 +1,55 @@
+.accordion {
+    background-color: var(--light_Blue);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 1.3rem;
+    transition: 0.5s; 
+    width: 100%;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    
+}
+
+.active, .accordion:hover {
+background-color: var(--yellow);
+color: black;
+transition: 0.3s; 
+letter-spacing: 3px;
+}
+
+
+
+
+
+.accordion:after {
+content: '\002B';
+color: white;
+font-weight: bold;
+float: right;
+margin-left: 5px;
+}
+
+.active:after {
+content: "\2212";
+}
+
+.panel {
+padding: 0 18px;
+background-color: var(--dark_Blue);
+color: white;
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.2s ease-out;
+
+}
+
+
+
+#info{
+    width:350px;
+    /* border-radius: 30px 30px 30px 30px; */
+}
