@@ -93,7 +93,7 @@
                         foreach ($nature as $natures) {
                             switch ($natures) {
                                 case 'Butterfly Pavillion':
-                                    if ($_POST["pasigueno"] == "pasigueno") {
+                                    if ($_POST["pasigueno"] == "You're a Pasigueño!") {
                                         $init_Value = 10;
                                         $sum += $init_Value;
                                     }else {
@@ -104,7 +104,7 @@
                                     
                                     break;
                                 case 'Flower Park':
-                                    if ($_POST["pasigueno"] == "pasigueno") {
+                                    if ($_POST["pasigueno"] == "You're a Pasigueño!") {
                                         $init_Value = 10;
                                         $sum += $init_Value;
                                     }else {
@@ -113,7 +113,7 @@
                                     }
                                     break;
                                 case 'Pasig Zoo':
-                                    if ($_POST["pasigueno"] == "pasigueno") {
+                                    if ($_POST["pasigueno"] == "You're a Pasigueño!") {
                                         $init_Value = 10;
                                         $sum += $init_Value;
                                     }else {
@@ -140,7 +140,7 @@
                         foreach ($leisure as $leisures) {
                             switch ($leisures) {
                                 case 'Rapid Rides':
-                                    if ($_POST["pasigueno"] == "pasigueno") {
+                                    if ($_POST["pasigueno"] === "You're a Pasigueño!") {
                                         $init_Value = 30;
                                         $sum += $init_Value;
                                     }else {
@@ -155,6 +155,28 @@
                                 case 'Amphitheater':
                                     $init_Value = 2000;
                                     $sum += $init_Value;
+                                    break;
+                                case 'Picnic Ground':
+                                    $init_Value = 2000;
+                                    $sum += $init_Value;
+                                    break;
+                                case 'Mini Train':
+                                    if ($_POST["pasigueno"] === "You're a Pasigueño!") {
+                                        $init_Value = 10;
+                                        $sum += $init_Value;
+                                    }else {
+                                        $init_Value = 20;
+                                        $sum += $init_Value;
+                                    }
+                                    break;
+                                case 'Boat Rental':
+                                    if ($_POST["pasigueno"] == "You're a Pasigueño!") {
+                                        $init_Value = 40;
+                                        $sum += $init_Value;
+                                    }else {
+                                        $init_Value = 50;
+                                        $sum += $init_Value;
+                                    }
                                     break;
                                 
                                 default:
@@ -174,7 +196,43 @@
                         echo "<div> <div id=\"receipt_Header\">Adventure</div>";
                         echo "<ol>";
                         foreach ($adventure as $adventures) {
-                            echo "<li>" . $adventures . "</li>";
+                            switch ($adventures) {
+                                case 'MAZE Garden':
+                                    if ($_POST["pasigueno"] == "You're a Pasigueño!") {
+                                        $init_Value = 10;
+                                        $sum += $init_Value;
+                                    }else {
+                                        $init_Value = 10;
+                                        $sum += $init_Value;
+                                    }
+                                    
+                                    
+                                    break;
+                                case 'Zip Line':
+                                    if ($_POST["pasigueno"] == "You're a Pasigueño!") {
+                                        $init_Value = 80;
+                                        $sum += $init_Value;
+                                    }else {
+                                        $init_Value = 130;
+                                        $sum += $init_Value;
+                                    }
+                                    break;
+                                case 'Obstacles Courses':
+                                    if ($_POST["pasigueno"] == "You're a Pasigueño!") {
+                                        $init_Value = 100;
+                                        $sum += $init_Value;
+                                    }else {
+                                        $init_Value = 150;
+                                        $sum += $init_Value;
+                                    }
+                                    break;
+                                
+                                default:
+                                    # code...
+                                    break;
+                            }
+                            echo "<li>" . $adventures ." - " . $init_Value.  "₱</li>";
+                            $init_Value = 0;    
                         }
                         echo "</ol></div>";
                     }

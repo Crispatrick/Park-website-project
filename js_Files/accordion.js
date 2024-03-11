@@ -91,4 +91,25 @@ function toggleCheckbox(button) {
 }
 
 
+
+
+
+//*checks if an attraction is picked, if not displays an js alert
+function validateForm() {
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  var checked = false;
+
+  checkboxes.forEach(function(checkbox) {
+    if (checkbox.checked) {
+      checked = true;
+    }
+  });
+
+  if (!checked) {
+    alert("Please select at least one attraction.");
+    event.preventDefault(); 
+    return false; // Prevent form submission
+  }
+}
+
  

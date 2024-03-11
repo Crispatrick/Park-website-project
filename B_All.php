@@ -92,8 +92,8 @@
 
         
                     <div id="buttons">
-                        <input style="letter-spacing: 0px; padding: 5px;" class="btnBooking" type="button" value="CANCEL" onclick="togglelogin()">
-                        <input style="letter-spacing: 0px; padding: 5px;" class="btnBooking" type="submit" value="CONFIRM" name="confirm">
+                        <input style="letter-spacing: 0px; padding: 5px;" class="btnBooking" type="button" value="CANCEL" onclick="window.location.href='index.php';">
+                        <input style="letter-spacing: 0px; padding: 5px;" class="btnBooking" type="submit" value="CONFIRM" name="confirm" onclick="validateForm()">
                     </div>
                 </section>
             </section>
@@ -102,7 +102,7 @@
             <section id="info">
                 <section>
                     <button class="accordion bypassButton" >
-                        <input type="checkbox" name="nature_Checkbox[]" id="Butterfly_Pavillion" value="Butterfly Pavillion" class="checkbox">
+                        <input type="checkbox" name="nature_Checkbox[]" id="Butterfly_Pavillion" value="Butterfly Pavillion" class="checkbox" >
                         <label for="Butterfly_Pavillion">Butterfly Pavillion</label>
                     </button>
                     <div class="panel">
