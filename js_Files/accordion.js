@@ -125,20 +125,24 @@ function moveParent() {
   parent.style.left = left_move + 'px'; // Adjust the value as needed
   parent.addEventListener('mouseleave', function() {
       parent.style.left = '140px'; // Return parent to original position when mouse leaves
+      
   });
 }
 function moveParent_ad() {
   var parent = document.getElementById('adventure');
-  
+
   parent.style.left = left_move + 'px'; // Adjust the value as needed
   parent.addEventListener('mouseleave', function() {
       parent.style.left = '140px'; // Return parent to original position when mouse leaves
+      
   });
 }
 function moveParent_lei() {
   var parent = document.getElementById('leisure');
+
   parent.style.left = left_move + 'px'; // Adjust the value as needed
   parent.addEventListener('mouseleave', function() {
       parent.style.left = '140px'; // Return parent to original position when mouse leaves
+      
   });
 }

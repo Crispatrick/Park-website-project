@@ -52,6 +52,16 @@ transition: max-height 0.2s ease-out;
 
 }
 
+.accordion label{
+    cursor: pointer;
+}
+
+
+/* .panel ul{
+    padding: 0px;
+    margin: 0px;
+} */
+
 
 /* accordion width */
 #info{

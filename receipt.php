@@ -12,6 +12,7 @@
     ?>
 
     <main>
+    <div class="blur-overlay"></div>
         <div id="receipt">
             <h3 id="receipt_Header">Personal Information</h3>
             <section id="personal_InfoCon">
