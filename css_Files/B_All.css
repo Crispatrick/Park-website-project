@@ -166,6 +166,10 @@ body{
     width: var(--Bar_Width);
     transition: 0.8s ease-in-out;
     z-index:2;
+
+
+    /* height: 300px; */
+    /* overflow-y: scroll; */
     
 }
 

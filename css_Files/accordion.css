@@ -3,7 +3,7 @@
     background-color: #70a375;
     color: white;
     cursor: pointer;
-    padding: 18px;
+    padding: 10px;
     border: none;
     text-align: left;
     outline: none;
@@ -13,7 +13,9 @@
     letter-spacing: 2px;
     text-transform: capitalize;
     
-    padding-left: 35px;
+    padding-left: 30px;
+
+    
 }
 
 .active, .accordion:hover {
@@ -41,7 +43,7 @@ content: "\2212";
 
 .panel {
 padding: 0 18px;
-background-color: var(--dark_Blue);
+background-color: #456948;
 
 color: white;
 max-height: 0;
@@ -51,8 +53,8 @@ transition: max-height 0.2s ease-out;
 }
 
 
-
+/* accordion width */
 #info{
-    width:350px;
+    width:400px;
     /* border-radius: 30px 30px 30px 30px; */
 }
