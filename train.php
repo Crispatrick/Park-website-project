@@ -54,6 +54,11 @@
                     <ul>
                         <li>Per bus w/ train ride & butterfly pavilion <br> - 1,000.00Php</li>                    
                     </ul>
+                    
+                    <!-- button link for booking page -->
+                    <div style="padding: 0px; display:flex;justify-content:end">
+                        <input style="letter-spacing: 2px; padding: 5px; font-size:1.3rem" class="btnBooking" type="submit" value="BOOK" name="confirm" onClick="window.location.href='B_All.php'">
+                    </div>
                 </div>   
             </div>
 

@@ -23,6 +23,7 @@
                     <div>Contact: </div>
                     <div>Schedule: </div>
                     <div>Pasigueño: </div>
+                    <div>Comments </div>
                 </section>
                 <section class="personal_Info">
                     <?php
@@ -51,9 +52,16 @@
                         } else {
                             echo "di gumagana par";
                         }
+
+
                     ?>
                 </section>
+
+
             </section>
+            <?php
+                echo "<div style=\"margin-right:200px; margin-left:200px;  text-align:center; background-color:var(--dark_Blue); padding:30px;\">" . $_POST["comment"] . "</div>";
+            ?>
             <hr style="width:100%;text-align:left;margin-left:0;">
 
             <?php
@@ -261,6 +269,7 @@
             <script>
                 function confirmation() {
                     window.alert("Thanks you for Booking!");
+                    window.location.href = "index.php";
                 }
             </script>
                 

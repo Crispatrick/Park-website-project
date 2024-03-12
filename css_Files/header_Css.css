@@ -277,6 +277,7 @@ a{
     border: none;
     border: 2px solid var(--yellow); 
     margin: 5px;
+    cursor: pointer;
     /* flex-grow: 1;
     /* border-radius: var(--header_border_Radius); */
 }

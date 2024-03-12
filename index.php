@@ -104,21 +104,60 @@
                         About
                     </h3>
                     <div id="about_Paragraphs">
-                        <p>
-                        It's a big city out there and it's growing at an exhausting pace. And when you find yourself always following the same crowd, sometimes it helps to follow your own trail. Sometimes, all you need is the right fix to keep you going.
-                        </p>
-                        <p>
-                        Whether it’s a refreshing dip in the pool, the adrenaline rush of scaling walls, or just the inner calm that comes with communing with nature, whatever your fix, you can find it in Rainforest Park. And when your visit comes to an end, you may leave a trail behind you, but Rainforest memories would remain with you all the way back to the big city.
-                        </p>
-                        <p>
-                        It’s not a long way away. Go ahead. Pick a trail and find a fix.
+                        <p style="font-size: 1.5rem;">
+                        It's a big city out there and it's growing at an exhausting pace. And when you find yourself always following the same crowd, sometimes it helps to follow your own trail. Sometimes, all you need is the right fix to keep you going.   Whether it’s a refreshing dip in the pool, the adrenaline rush of scaling walls, or just the inner calm that comes with communing with nature, whatever your fix, you can find it in Rainforest Park. And when your visit comes to an end, you may leave a trail behind you, but Rainforest memories would remain with you all the way back to the big city. It’s not a long way away. Go ahead. Pick a trail and find a fix.
                         </p>
                     </div>
                 </div>
+
+            </div>  
+
+            <!-- im tired and lazy now so i wont do this part in a perfect manner. Monke brain activated -->
+            <section style="display: flex; justify-content:space-evenly; color:white; flex-wrap:wrap;">
+                <form action="" method="post" style="display: block;">
+                    <h3 id="form_Header">
+                        Leave a message?
+                    </h3>
+
+                    <section id="infos">
+                        <div class="inputs">
+                            <label for="fname">First Name:</label>
+                            <input class="types_Size types_Decor"  type="text" placeholder="Input your first name" id="fname" name="fname" autofocus required>
+                        </div>
+                        <div class="inputs">
+                            <label for="lname">Last Name:</label>
+                            <input class="types_Size types_Decor"  type="text" placeholder="Input your last name" id="lname" name="lname"required>
+                        </div>
+                        <div class="inputs">
+                            <label for="email">Email:</label>
+                            <input class="types_Size types_Decor"  type="email" placeholder="example@example.com" id="email" name="email">
+                        </div>
+                        <div class="inputs">
+                            <label for="phone">Contact No:</label>
+                            <input class="types_Size types_Decor"  type="tel" id="phone" name="phone" placeholder="Ex. 0917-123-45678" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+                        </div>
+                        <div class="inputs">
+                            <label for="comment">Message:</label>
+                            <textarea class="types_Decor" id="comment" name="comment" rows="6" cols="49" placeholder="Leave a message?"></textarea>
+                        </div>
+                        
+
+                    </section>
+                    <input style="cursor:pointer; float:right;font-size:1.2rem;letter-spacing: 0px; padding: 15px; justify-content:end; margin-top:20px;" class="btnBooking" type="submit" value="Submit" onclick="thanks()">
+
+                    <script>
+                        function thanks() {
+                            alert("Your meessage has been sent!");
+                            event.preventDefault(); 
+                        }
+                    </script>
+
+                </form>
+
                 <div id="about_Image">
                     <img src="Resources\Images\mapmarkers_BG.png" alt="">
                 </div>
-            </div>  
+            </section>
         </section>
     </main>
 
