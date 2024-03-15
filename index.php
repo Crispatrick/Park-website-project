@@ -122,7 +122,7 @@
                     <section id="infos">
                         <div class="inputs">
                             <label for="fname">First Name:</label>
-                            <input class="types_Size types_Decor"  type="text" placeholder="Input your first name" id="fname" name="fname" autofocus required>
+                            <input class="types_Size types_Decor"  type="text" placeholder="Input your first name" id="fname" name="fname" required>
                         </div>
                         <div class="inputs">
                             <label for="lname">Last Name:</label>

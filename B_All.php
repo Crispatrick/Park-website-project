@@ -14,7 +14,7 @@
 <?php
     include("html_Files\\header.html");
 ?>
-    <div class="blur-overlay"></div>
+    <!-- <div class="blur-overlay"></div> -->
 
     <section id="container">
         <!-- booking informations - needs to be toggled -->
@@ -139,8 +139,7 @@
                     </section>
 
                     
-                    <div id="Bookmark" onmouseover="moveParent()"></div>
-
+                    <div id="Bookmark" onmouseover="moveParent()">NATURE</div>
 
 
                 </section>
@@ -229,13 +228,14 @@
                         </div>
                     </section>
                 
-                    <div id="Bookmark" onmouseover="moveParent_lei()" style="background-color: var(--B_dark_Blue);"></div>
+                    <div id="Bookmark" onmouseover="moveParent_lei()" style="background-color: var(--B_dark_Blue); top:110px;">LEISURE</div>
                 </section>
 
 
 
 
 
+                    
                 <section id="adventure">
                     <section>
                         <button class="accordion bypassButton">
@@ -275,7 +275,7 @@
                         </div>
                     </section>
 
-                    <div id="Bookmark" onmouseover="moveParent_ad()";  style="background-color: var(--B1_dark_Blue);"></div>
+                    <div id="Bookmark" onmouseover="moveParent_ad()";  style="background-color: var(--B1_dark_Blue); ">ADVENTURE</div>
                 </section>
 
 

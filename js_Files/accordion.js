@@ -122,27 +122,33 @@ left_move = 460;
 function moveParent() {
   var parent = document.getElementById('nature');
 
+  parent.style.zIndex = 2;
   parent.style.left = left_move + 'px'; // Adjust the value as needed
   parent.addEventListener('mouseleave', function() {
       parent.style.left = '140px'; // Return parent to original position when mouse leaves
+      parent.style.zIndex = 1;
       
   });
 }
 function moveParent_ad() {
   var parent = document.getElementById('adventure');
 
+  parent.style.zIndex = 2;
   parent.style.left = left_move + 'px'; // Adjust the value as needed
   parent.addEventListener('mouseleave', function() {
       parent.style.left = '140px'; // Return parent to original position when mouse leaves
-      
+      parent.style.zIndex = 1;
   });
 }
 function moveParent_lei() {
   var parent = document.getElementById('leisure');
 
+  parent.style.zIndex = 2;
   parent.style.left = left_move + 'px'; // Adjust the value as needed
   parent.addEventListener('mouseleave', function() {
       parent.style.left = '140px'; // Return parent to original position when mouse leaves
+      parent.style.zIndex = 1;
+
       
   });
 }
