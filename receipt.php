@@ -22,6 +22,7 @@
                     <div>Email: </div>
                     <div>Contact: </div>
                     <div>Schedule: </div>
+                    <div>Pax: </div>
                     <div>Pasigueño: </div>
                     <div>Comments </div>
                 </section>
@@ -41,7 +42,8 @@
                                     echo "<div>" . "Not Available" . "</div>";
                                 }
                             echo "<div>" . $_POST["schedule"] . "</div>";
-
+                            // $pax = (int);
+                            echo "<div>" . $_POST["quantity"] . "</div>";
                                 if (isset( $_POST["pasigueno"]) && !empty( $_POST["pasigueno"])) {
                                     echo "<div>" . $_POST["pasigueno"] . "</div>"; 
                                 }else {
@@ -255,7 +257,13 @@
 
                 echo "<hr style=\"width:100%;text-align:left;margin-left:0;\">";
                 if (isset($_POST["cards"])) {
-                    echo "<h5 style=\"text-align:center; margin:0;\">Total payment is {$sum}₱ via {$_POST["cards"]}</h5>";
+                    $pax = (int)$_POST["quantity"];
+                    $orig = $sum;
+
+                    // echo $sum . " original value";
+                    $sum = $sum*$pax;
+                    // $sum *= 
+                    echo "<h5 style=\"text-align:center; margin:0;\">Total payment is {$sum}₱ ({$orig}₱ x {$pax} Pax) via {$_POST["cards"]}</h5>";
                 } else {
                     echo "San ka mag babayad Idol?";
                 }

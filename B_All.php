@@ -44,6 +44,11 @@
                     </div>
 
                     <div class="inputs">
+                        <label for="quantity">Pax:</label>
+                        <input type="number" id="quantity" name="quantity" required class="types_Size types_Decor">
+                    </div>
+                    
+                    <div class="inputs">
                         <label for="pasig">Pasigueño?</label>
                         <div id="pasigueno" class="types_Size types_Decor" style="background-color:rgba(255, 255, 255, 0);">
                             <div>
