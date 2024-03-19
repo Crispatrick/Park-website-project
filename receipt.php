@@ -9,10 +9,22 @@
 <body>
     <?php
         include("html_Files\\header.html");
+
+        //to share the data in oop part and future plans
+        session_start();
+        $_SESSION["comment"] = $_POST["comment"];
+        $_SESSION["payment"] = $_POST["cards"];
+        $_SESSION["fname"] = $_POST["fname"];
+        $_SESSION["lname"] = $_POST["lname"];
+        $_SESSION["email"] = $_POST["email"];
+        $_SESSION["phone"] = $_POST["phone"];
+        $_SESSION["quantity"] = $_POST["quantity"];
+        $_SESSION["schedule"] = $_POST["schedule"];
+        $_SESSION["pasigueno"] = $_POST["pasigueno"];        
     ?>
 
     <main>
-    <div class="blur-overlay"></div>
+    <!-- <div class="blur-overlay"></div> -->
         <div id="receipt">
             <h3 id="receipt_Header">Personal Information</h3>
             <section id="personal_InfoCon">
@@ -80,17 +92,22 @@
 
                     if (isset($_POST["nature_Checkbox"])) {
                         $nature = $_POST["nature_Checkbox"];
+                        $_SESSION["nature"] = $nature; 
                     }
                     
                     if (isset($_POST["leisure_Checkbox"])) {
                         $leisure = $_POST["leisure_Checkbox"];
+                        $_SESSION["leisure"] = $leisure;   
                     }
 
                     if (isset($_POST["adventure_Checkbox"])) {
                         $adventure = $_POST["adventure_Checkbox"];
+                        $_SESSION["adventure"] = $adventure; 
                     }
                     
-                    
+                       
+                   
+                     
 
 
                     // showing variables
@@ -259,9 +276,11 @@
                 if (isset($_POST["cards"])) {
                     $pax = (int)$_POST["quantity"];
                     $orig = $sum;
+                    $_SESSION["orig"] = $orig; 
 
                     // echo $sum . " original value";
                     $sum = $sum*$pax;
+                    $_SESSION["sum"] = $sum; 
                     // $sum *= 
                     echo "<h5 style=\"text-align:center; margin:0;\">Total payment is {$sum}₱ ({$orig}₱ x {$pax} Pax) via {$_POST["cards"]}</h5>";
                 } else {
@@ -271,7 +290,7 @@
             ?>
         
             <div id="btnCon">
-                <button class="btnBooking" onclick="confirmation()">Confirm</button>
+                <button class="btnBooking" onClick="window.location.href='OOP_Part.php'">Confirm</button>
             </div> 
             
             <script>
