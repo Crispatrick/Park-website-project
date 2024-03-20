@@ -114,7 +114,7 @@
 
             <!-- im tired and lazy now so i wont do this part in a perfect manner. Monke brain activated -->
             <section style="display: flex; justify-content:space-evenly; color:white; flex-wrap:wrap;">
-                <form action="" method="post" style="display: block;">
+                <form action="OOP_leaveMessage.php" method="post" style="display: block;">
                     <h3 id="form_Header">
                         Leave a message?
                     </h3>
@@ -143,7 +143,7 @@
                         
 
                     </section>
-                    <input style="cursor:pointer; float:right;font-size:1.2rem;letter-spacing: 0px; padding: 15px; justify-content:end; margin-top:20px;" class="btnBooking" type="submit" value="Submit" onclick="thanks()">
+                    <input style="cursor:pointer; float:right;font-size:1.2rem;letter-spacing: 0px; padding: 15px; justify-content:end; margin-top:20px;" class="btnBooking" type="submit" value="Submit" onClick="window.location.href='OOP_leaveMessage.php'">
 
                     <script>
                         function thanks() {
