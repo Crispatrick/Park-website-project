@@ -1,0 +1,28 @@
+#stats{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.statsBox{
+    background-color: yellow;
+    padding: 20px;
+}
+
+  
+  
+
+
+
+#stats_Number{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.stats_Num_Children{
+    display: flex;
+    flex-direction: column;
+    background-color: yellow;
+    text-align: center;
+}
