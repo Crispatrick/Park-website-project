@@ -15,10 +15,26 @@ body{
     grid-gap: 0.3em;
 
     text-align: center;
+    margin: 40px;
 }
 
 .stats_Num_Children{
+    display: flex;
     background-color: var(--light_Blue);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
 }
 
+.statsBox{
+    flex-direction: row;
+    /* padding: 5px; */
+}
 
+#data{
+    font-size: 3rem;
+}

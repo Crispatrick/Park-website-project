@@ -18,14 +18,15 @@
 
     <main>
         <section id="statistic_Header">
-            <form action="" id="stats">
+            <form action="rave_Dashboard.php" id="stats" method="post">
+
                 <div class="statsBox stats_Num_Children">
                     <label for="date">Date</label>
-                    <input type="date" name="date" id="date">
+                    <input type="date" name="date" id="date" class="types_Size types_Decor" value="<?php if (isset($_POST['date'])) {echo $_POST['date'];} ?>">
 
 
                     <!-- this script below is via chatgpt. it gets the current date and use it as placeholder in date input type -->
-                    <script>
+                    <!-- <script>
                         // Getting today's date with the right vibes
                         let today = new Date();
                         let date = today.getDate();
@@ -45,13 +46,13 @@
 
                         // And now, the magic move - setting the date input's value to today
                         document.getElementById('date').value = formattedToday;
-                    </script>
+                    </script> -->
                 </div>
 
 
                 <div class="statsBox stats_Num_Children">
                     <label for="attraction">Attraction</label>
-                        <select id="attraction" name="attraction" required>
+                        <select id="attraction" name="attraction" class="types_Size types_Decor">
                             <option value="Select" disabled selected> -Select- </option>
                             <option value="Nature"> Nature </option>
                             <option value="Leisure"> Leisure </option>
@@ -73,71 +74,73 @@
             
 
                 
-                <div class="statsBox stats_Num_Children">
+                <div class="statsBox stats_Num_Children " >
                     <label for="pasigueno">Pasig Resident</label>
-                    <select id="pasigueno" name="pasigueno" required>
-                        <option value="select" disabled> -Select- </option>
-                        <option value="yes"> Yes </option>
-                        <option value="no"> No </option>
+                    <select id="pasigueno" name="pasigueno" class="types_Size types_Decor" >
+                        <option value="select" disabled selected> 
+                            <?php 
+                            if (isset($_POST['pasigueno'])) {
+                                echo $_POST['pasigueno'];
+                            } 
+                            else {
+                                echo "-select=";
+                            }
+                            ?> 
+                        </option>
+                        <option value="Yes"> Yes </option>
+                        <option value="No"> No </option>
                     </select>
             
                 </div>
                 
                     
                 <div class="stats_Num_Children">
-                    <div>Total Bookings (Date) </div>
                     <div id="data">
                         <!-- dito yung query ng database -->
                         <?php
-                        // session_start();
-                        include("databaseCon.php");
+                            // session_start();
+                            include("databaseCon.php");
 
-                        try {
-                            $query = $pdo->query('SELECT * FROM bookinginfo WHERE schedule = CURRENT_DATE');
-                            echo $query->rowCount();
-                            
-
-
-
-                            //!eto para sa pag binago na yung schedule, dipa to tapus. gamitan mo ng post
-                            // $query = ('SELECT * FROM bookingInfo where schedule = :schedule');
-                            // $queryPrep = $pdo->prepare($query);
-                            // $queryPrep->execute(['schedule' => $_SESSION["schedule"]]);
-
-                            // echo $queryPrep->rowCount();
-                        } catch (PDOException $e) {
-                            echo "<script type = 'text/javascript'>
-                                    alert(\"ehhh mali syntax ng query mo par.\")
-                                </script>";
-                            die();
-                        }
+                            if (isset($_POST['date'])) {
+                                $date = $_POST['date'];
+                                try {
+                                    $query = ('SELECT * FROM bookingInfo where schedule = :schedule');
+                                    $queryPrep = $pdo->prepare($query);
+                                    $queryPrep->execute(['schedule' => $date]);
+        
+                                    echo $queryPrep->rowCount();
+                                } catch (PDOException $e) {
+                                    echo "<script type = 'text/javascript'>
+                                            alert(\"ehhh mali syntax ng query mo par.\")
+                                        </script>";
+                                    die();
+                                }
 
 
+                                // echo "Test 1";
+                            } else {
+                                try {
+                                    $query = $pdo->query('SELECT * FROM bookinginfo WHERE schedule = CURRENT_DATE');
+                                    echo $query->rowCount();
+                                } catch (PDOException $e) {
+                                    echo "<script type = 'text/javascript'>
+                                            alert(\"ehhh mali syntax ng query mo par.\")
+                                        </script>";
+                                    die();
+                                }
 
-
-
-                        // try {
-                        //     $query = $pdo->query('SELECT * FROM bookingInfo');
-                        //     echo $query->rowCount();
-                        // } catch (PDOException $e) {
-                        //     echo "<script type = 'text/javascript'>
-                        //             alert(\"ehhh mali syntax ng query mo par.\")
-                        //         </script>";
-                        //     die();
-                        // }
-
-
-                        
+                                // echo "Test 2";
+        
+                            }
+                    
 
                         ?>
 
-
-
                     </div>
+                    
+                    <div>Total Bookings</div>
+         
 
-                    <script>
-                        document.getElementById("data").innerHTML = <?php ?>;
-                    </script>
                 </div>
 
 
@@ -153,18 +156,62 @@
 
 
                 <div class="stats_Num_Children">
-                    <div>Total Pasig Residents</div>
-                    <div>
+                    <div id="data">
                         <!-- dito yung query ng database -->
-                        23
+                        
+                        <?php
+                            // session_start();
+                            include("databaseCon.php");
+
+                            if (isset($_POST['pasigueno']) && $_POST['pasigueno'] === "No") {
+                                // $pasigue = $_POST['pasigueno'];
+                                try {
+                                    $query = $pdo->query('SELECT * FROM bookingInfo where pasigueno = "You\'re not a Pasigueño!"');
+        
+                                    echo $query->rowCount();
+                                } catch (PDOException $e) {
+                                    echo "<script type = 'text/javascript'>
+                                            alert(\"ehhh mali syntax ng query mo par.\")
+                                        </script>";
+                                    die();
+                                }
+
+
+                                // echo "Test 1";
+                            } else {
+                                try {
+                                    $query = $pdo->query('SELECT * FROM bookingInfo where pasigueno = "You\'re a Pasigueño!"');
+        
+                                    echo $query->rowCount();
+                                } catch (PDOException $e) {
+                                    echo "<script type = 'text/javascript'>
+                                            alert(\"ehhh mali syntax ng query mo par.\")
+                                        </script>";
+                                    die();
+                                }
+
+                                // echo "Test 2";
+        
+                            }
+                    
+
+                        ?>                    
                     </div>
+                    <div>Total Pasig Residents</div>
                 </div>
+
+
+                <!-- wala lang tong div sa baba, para lang gumitna yung update button kasi tag 2x3 yung grid         -->
+                <div></div>
+
+
+                <!-- update button -->
+                <div style="display: flex; justify-content:center">
+                    <input style="letter-spacing: 2px; padding: 5px; font-size:1.3rem" class="btnBooking" type="submit" value="UPDATE" name="confirm">        
+                </div>
+
             </form> 
         </section>
-
-        <div style="display: flex; justify-content:center">
-            <input style="letter-spacing: 2px; padding: 5px; font-size:1.3rem" class="btnBooking" type="submit" value="UPDATE" name="confirm">        
-        </div>
 
 
         <section>

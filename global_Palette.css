@@ -51,3 +51,19 @@ body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.types_Decor{
+    border-radius: 10px;
+    border-style: none;
+    text-align: center;
+
+    background-color: var(--dark_Blue);
+    color: white;
+    color-scheme: dark;
+}
+
+.types_Size{
+
+    width: 250px;
+    height: 40px;
+    padding: 0px;
+}
