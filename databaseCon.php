@@ -13,6 +13,7 @@ try {
 // Create a PDO instance
 $pdo = new PDO($dsn, $user, $pass);
 $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo "<script type = 'text/javascript'>
         alert(\"ayaw mag connect par.\")

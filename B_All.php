@@ -40,7 +40,7 @@
         
                     <div class="inputs">
                         <label for="schedule">Schedule</label>
-                        <input type="datetime-local" id="schedule" name="schedule" required class="types_Size types_Decor">
+                        <input type="date" id="schedule" name="schedule" required class="types_Size types_Decor">
                     </div>
 
                     <div class="inputs">
