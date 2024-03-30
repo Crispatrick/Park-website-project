@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css?v=<?php echo time(); ?>"> 
     <link rel="stylesheet" href="global_Palette.css">
+    <link rel="stylesheet" href="css_Files\rave_dashboard.css">
     <title>Rave</title>
 </head>
 <body>
@@ -96,6 +97,186 @@
         </section>
 
 
+        <section id="statistic_Header">
+            <form action="index.php #statistic_Header" id="stats" method="post">    
+                <div class="stats_Num_Children">
+                    <div id="data">
+                        <!-- dito yung query ng database -->
+                        <?php
+                            // session_start();
+                            include("databaseCon.php");
+
+                            if (isset($_POST['date'])) {
+                                $date = $_POST['date'];
+                                try {
+                                    $query = ('SELECT * FROM bookingInfo where schedule = :schedule');
+                                    $queryPrep = $pdo->prepare($query);
+                                    $queryPrep->execute(['schedule' => $date]);
+        
+                                    echo $queryPrep->rowCount();
+                                } catch (PDOException $e) {
+                                    echo "<script type = 'text/javascript'>
+                                            alert(\"ehhh mali syntax ng query mo par.\")
+                                        </script>";
+                                    die();
+                                }
+
+
+                                // echo "Test 1";
+                            } else {
+                                try {
+                                    $query = $pdo->query('SELECT * FROM bookinginfo WHERE schedule = CURRENT_DATE');
+                                    echo $query->rowCount();
+                                } catch (PDOException $e) {
+                                    echo "<script type = 'text/javascript'>
+                                            alert(\"ehhh mali syntax ng query mo par.\")
+                                        </script>";
+                                    die();
+                                }
+
+                                // echo "Test 2";
+        
+                            }
+                    
+
+                        ?>
+
+                    </div>
+                    
+                    <div>
+                        <label for="date">Booked by date</label>
+                    </div>
+                    
+                    <div class="statsBox">
+                       
+                        <input type="date" name="date" id="date" class="types_Size types_Decor" value="<?php if (isset($_POST['date'])) {echo $_POST['date'];} ?>">
+
+
+                        <!-- this script below is via chatgpt. it gets the current date and use it as placeholder in date input type -->
+                        <!-- <script>
+                            // Getting today's date with the right vibes
+                        let today = new Date();
+                        let date = today.getDate();
+                        let month = today.getMonth() + 1; // Jazzing up the month since it starts at 0
+                        let year = today.getFullYear();
+
+                        // Adding a leading zero to the mix for single digit month and date
+                        if (date < 10) {
+                            date = '0' + date;
+                        }
+                        if (month < 10) {
+                            month = '0' + month;
+                        }
+
+                        // Composing the date in the format that the date input loves: YYYY-MM-DD
+                        let formattedToday = `${year}-${month}-${date}`;
+
+                            // And now, the magic move - setting the date input's value to today
+                            document.getElementById('date').value = formattedToday;
+                        </script> -->
+                    </div>
+
+                </div>
+
+
+
+                <div class="stats_Num_Children">
+                    <div id="dataHead">
+                       <?php
+                            try {
+                                $query = $pdo->query('SELECT * FROM bookinginfo');
+                                echo $query->rowCount();
+                            } catch (PDOException $e) {
+                                echo "<script type = 'text/javascript'>
+                                        alert(\"ehhh mali syntax ng query mo par.\")
+                                    </script>";
+                                die();
+                            }
+                        
+                        ?>
+                    </div>
+                    <div>Total of people booked</div>
+                    <!-- update button -->
+                    <div style="display: flex; justify-content:center">
+                        <input style="letter-spacing: 2px; padding: 0px; font-size:1rem; min-width:0px; width:100px; height:30px;" class="btnBooking" type="submit" value="UPDATE" name="confirm">        
+                    </div>
+
+
+                    
+                </div>
+
+
+
+                <div class="stats_Num_Children">
+                    <div id="data">
+                        <!-- dito yung query ng database -->
+                        
+                        <?php
+                            // session_start();
+                            include("databaseCon.php");
+
+                            if (isset($_POST['pasigueno']) && $_POST['pasigueno'] === "No") {
+                                // $pasigue = $_POST['pasigueno'];
+                                try {
+                                    $query = $pdo->query('SELECT * FROM bookingInfo where pasigueno = "You\'re not a Pasigueño!"');
+        
+                                    echo $query->rowCount();
+                                } catch (PDOException $e) {
+                                    echo "<script type = 'text/javascript'>
+                                            alert(\"ehhh mali syntax ng query mo par.\")
+                                        </script>";
+                                    die();
+                                }
+
+
+                                // echo "Test 1";
+                            } else {
+                                try {
+                                    $query = $pdo->query('SELECT * FROM bookingInfo where pasigueno = "You\'re a Pasigueño!"');
+        
+                                    echo $query->rowCount();
+                                } catch (PDOException $e) {
+                                    echo "<script type = 'text/javascript'>
+                                            alert(\"ehhh mali syntax ng query mo par.\")
+                                        </script>";
+                                    die();
+                                }
+
+                                // echo "Test 2";
+        
+                            }
+                    
+
+                        ?>                    
+                    </div>
+                    <label for="pasigueno">Pasig Resident</label>
+                    <div>
+                        <select id="pasigueno" name="pasigueno" class="types_Size types_Decor" >
+                            <option value="select" disabled selected> 
+                                <?php 
+                                if (isset($_POST['pasigueno'])) {
+                                    echo $_POST['pasigueno'];
+                                } 
+                                else {
+                                    echo "-select=";
+                                }
+                                ?> 
+                            </option>
+                            <option value="Yes"> Yes </option>
+                            <option value="No"> No </option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </form> 
+        </section>
+
+
         <section id="about">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2730.452022387123!2d121.09711075565221!3d14.573855914384826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7ea14ea41f1%3A0x5951aed87ce31a13!2sPasig%20Rainforest%20Park!5e0!3m2!1sen!2sph!4v1708099321575!5m2!1sen!2sph" width="100%"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="about_GMap"></iframe>
             <div id="about_DescContainer">
@@ -134,16 +315,16 @@
                         </div>
                         <div class="inputs">
                             <label for="phone">Contact No:</label>
-                            <input class="types_Size types_Decor"  type="tel" id="phone" name="phone" placeholder="Ex. 0917-123-45678" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+                            <input class="types_Size types_Decor"  type="tel" id="phone" name="phone" placeholder="Ex. 0917-123-45678" pattern="[0-9]{4}[0-9]{3}[0-9]{4}">
                         </div>
                         <div class="inputs">
                             <label for="comment">Message:</label>
-                            <textarea class="types_Decor" id="comment" name="comment" rows="6" cols="49" placeholder="Leave a message?"></textarea>
+                            <textarea class="types_Decor " id="comment" name="comment" rows="6" cols="49" placeholder="Leave a message?" required></textarea>
                         </div>
                         
 
                     </section>
-                    <input style="cursor:pointer; float:right;font-size:1.2rem;letter-spacing: 0px; padding: 15px; justify-content:end; margin-top:20px;" class="btnBooking" type="submit" value="Submit" onClick="window.location.href='OOP_leaveMessage.php'">
+                    <input style="cursor:pointer; float:right;font-size:1.2rem;letter-spacing: 0px; padding: 15px; justify-content:end; margin-top:20px;" class="btnBooking" type="submit" value="Submit">
 
                     <script>
                         function thanks() {

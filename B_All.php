@@ -35,7 +35,7 @@
                     </div>
                     <div class="inputs">
                         <label for="phone">Contact No</label>
-                        <input class="types_Size types_Decor"  type="tel" id="phone" name="phone" placeholder="Ex. 0917-123-45678" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}">
+                        <input class="types_Size types_Decor"  type="tel" id="phone" name="phone" placeholder="Ex. 0917-123-45678" pattern="[0-9]{4}[0-9]{3}[0-9]{4}">
                     </div>
         
                     <div class="inputs">
@@ -45,7 +45,7 @@
 
                     <div class="inputs">
                         <label for="quantity">Pax:</label>
-                        <input type="number" id="quantity" name="quantity" required class="types_Size types_Decor">
+                        <input type="number" id="quantity" name="quantity" required class="types_Size types_Decor" placeholder="How many?">
                     </div>
                     
                     <div class="inputs">

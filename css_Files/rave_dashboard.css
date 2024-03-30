@@ -1,40 +1,47 @@
-/* debug lang to */
-body{
-    background-color: var(--dark_Blue);
+
+#statistic_Header{
+    background-color: var(--green);    
+    padding: 0px;
+    margin: 0px;
 }
-
-
-
-
-
-
 #stats{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 0.3em;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-gap: 30px;
 
     text-align: center;
-    margin: 40px;
+    padding-bottom: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .stats_Num_Children{
     display: flex;
     background-color: var(--light_Blue);
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     color: white;
     align-items: center;
     justify-content: center;
     gap: 10px;
     flex-direction: column;
+
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.726);
 }
 
 .statsBox{
-    flex-direction: row;
+    /* display: flex;
+    gap: 20px; */
+    /* display: flex;
+    flex-direction: row; */
     /* padding: 5px; */
 }
 
 #data{
     font-size: 3rem;
+}
+#dataHead{
+    font-size: 5rem;
+    font-weight: bolder;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.726);;
 }

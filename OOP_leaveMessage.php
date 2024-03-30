@@ -64,7 +64,7 @@ $_SESSION["message"] = new bookingInfo();
                     <!-- <div>Email: </div> -->
                     <div>Contacts: </div>
                     <!-- <br> -->
-                    <div>Booking Details: </div>
+                    <div>Details: </div>
                     <!-- <br><br><br> -->
                     <div>Comments:</div>
                     <!-- <br> -->

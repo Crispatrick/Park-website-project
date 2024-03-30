@@ -4,6 +4,30 @@
 ::-webkit-scrollbar-button{background-color:#dedede;}
 ::-webkit-scrollbar-corner{background-color:black;}
 
+
+/* this changes the placeholder color to white in every browser */
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    rgb(255, 255, 255);
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    rgb(255, 255, 255);
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+     color:    rgb(255, 255, 255);
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+     color:    rgb(255, 255, 255);
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+     color:    rgb(255, 255, 255);
+}
+
+::placeholder { /* Most modern browsers support this now. */
+     color:    rgb(255, 255, 255);
+}
+
 :root{
     /* Background colors */
     /* --dark_Blue: #211C6A;
