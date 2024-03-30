@@ -23,42 +23,6 @@
         $_SESSION["schedule"] = $_POST["schedule"];
         $_SESSION["pasigueno"] = $_POST["pasigueno"];  
         
-        
-
-
-
-        //*database insert query
-        include("databaseCon.php");
-
-        // INSERT DATA
-        // $title = 'Post Five';
-        // $body = 'This is post five';
-        // $author = 'Kevin';
-
-        try {
-            $query = 'INSERT INTO bookingInfo(fname, lname, email, contact, 
-                                                schedule, pax, pasigueno, comments, payment)
-                            VALUES(:fname, :lname, :email, :contact, 
-                            :schedule, :pax, :pasigueno, :comments, :payment)';
-            $queryPrep = $pdo->prepare($query);
-            $queryPrep->execute(['fname' => $_SESSION["fname"], 
-                                'lname' => $_SESSION["lname"], 
-                                'email' => $_SESSION["email"],
-                                'contact' => strval($_SESSION["phone"]),
-                                'schedule' =>  $_SESSION["schedule"],
-                                'pax' => (int)$_POST["quantity"],
-                                'pasigueno' => $_SESSION["pasigueno"],
-                                'comments' => $_SESSION["comment"],
-                                'payment' => $_SESSION["payment"]
-                                ]);
-            // echo 'Post Added';    
-        } catch (PDOException $e) {
-            echo "<script type = 'text/javascript'>
-                    alert(\"ehhh mali syntax ng query mo par.\")
-                </script>";
-            die();
-        }
-
     ?>
 
     <main>
@@ -331,12 +295,6 @@
                 <button class="btnBooking" onClick="window.location.href='OOP_Part.php'">Confirm</button>
             </div> 
             
-            <script>
-                function confirmation() {
-                    window.alert("Thanks you for Booking!");
-                    window.location.href = "index.php";
-                }
-            </script>
                 
         </div>
     </main>
