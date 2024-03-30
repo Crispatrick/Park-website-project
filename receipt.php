@@ -328,7 +328,7 @@
             ?>
         
             <div id="btnCon">
-                <button class="btnBooking" onClick="window.location.href='OOP_Part.php'">Confirm</button>
+                <button class="btnBooking" onClick="confirmation()">Confirm</button>
             </div> 
             
             <script>

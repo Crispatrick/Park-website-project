@@ -324,7 +324,7 @@
                         
 
                     </section>
-                    <input style="cursor:pointer; float:right;font-size:1.2rem;letter-spacing: 0px; padding: 15px; justify-content:end; margin-top:20px;" class="btnBooking" type="submit" value="Submit">
+                    <input style="cursor:pointer; float:right;font-size:1.2rem;letter-spacing: 0px; padding: 15px; justify-content:end; margin-top:20px;" class="btnBooking" type="submit" value="Submit" onclick="thanks()">
 
                     <script>
                         function thanks() {
