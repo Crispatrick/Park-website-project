@@ -47,36 +47,55 @@
                         <label for="quantity">Pax:</label>
                         <input type="number" id="quantity" name="quantity" required class="types_Size types_Decor" placeholder="How many?">
                     </div>
+
+                    <!-- PASIGUENO SECTION -->
                     
                     <div class="inputs">
                         <label for="pasig">Pasigueño?</label>
                         <div id="pasigueno" class="types_Size types_Decor" style="background-color:rgba(255, 255, 255, 0);">
                             <div>
-                                <input type="radio" id="yes" name="pasigueno" value="You're a Pasigueño!" required>
+                                <input type="radio" id="yes" name="pasigueno" value="You're a Pasigueño!" onclick="toggleIDField()" required>
                                 <label for="yes">Yes</label>
                             </div>
                             <div>
-                                <input type="radio" id="no" name="pasigueno" value="You're not a Pasigueño!">
+                                <input type="radio" id="no" name="pasigueno" value="You're not a Pasigueño!" onclick="toggleIDField()">
                                 <label for="no">No</label>
                             </div>
                         </div>
                     </div>
 
+                    <!-- Upload your ID section -->
+                    <div class="inputs" id="idUploadSection" style="display: none;">
+                        <label for="validId">Upload ID</label>
+                        <input type="file" id="validId" name="validId" class="types_Size types_Decor file-input">
+                    </div>
+
+
+                    <script>
+                    function toggleIDField() {
+                        const isPasigueno = document.getElementById('yes').checked;
+                        const idUploadSection = document.getElementById('idUploadSection');
+                        
+                        if (isPasigueno) {
+                            idUploadSection.style.display = 'block';
+                        } else {
+                            idUploadSection.style.display = 'none';
+                        }
+                    }
+                    </script>
 
 
 
                     <hr style="width:100%;text-align:left;margin-left:0; background-color:white;">
 
 
-
-
-                    
                     <div class="inputs">
                         <label for="comment">Comments:</label>
                     </div>
                     <textarea class="types_Decor" id="comment" name="comment" rows="6" cols="50" placeholder="Leave a message?"></textarea>
 
-                    
+                    <!-- PAYMENT METHOD -->
+
                     <div class="inputs">
                         <div>Payment Method</div>
                         <div id="pasigueno" class="types_Size types_Decor" style="background-color:rgba(255, 255, 255, 0);">
@@ -92,6 +111,9 @@
                                 <input type="radio" name="cards" value="Paymaya" id="Paymaya">
                                 <label for="Paymaya">Paymaya</label>
                             </div>
+
+                            <!-- NEED ASAP -->
+                            <!-- SAMPLE QR CODE OF GCASH, PAYMAYA, ETC... -->
                         </div>
                     </div>
 
@@ -285,6 +307,8 @@
 
 
              </section>
+
+            <!-- NEED ACCOMODATION LIMIT AND VOID -->
         </form>
 
     </section>

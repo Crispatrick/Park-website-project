@@ -198,6 +198,10 @@ body{
     
 } 
 
+/* File input styling to match other inputs */
+input[type="file"] {
+    margin-left: 44px;
+}
 
 
 /* #fade{

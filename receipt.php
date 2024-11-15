@@ -111,10 +111,22 @@
 
 
             </section>
+
+            
             <?php
                 echo "<div style=\"margin-right:200px; margin-left:200px;  text-align:center; background-color:var(--dark_Blue); padding:30px;\">" . $_POST["comment"] . "</div>";
             ?>
             <hr style="width:100%;text-align:left;margin-left:0;">
+
+
+             <!-- Add QR Code here -->
+             <div id="qrCodeSection" style="text-align:center; margin-top:20px;">
+                <h3>Scan the QR Code to Pay</h3>
+                <img src="./Resources/Images/qrCode.png" alt="QR Code" style="max-width:200px; margin-top:20px;">
+            </div>
+
+            <hr style="width:100%;text-align:left;margin-left:0;">
+
 
             <?php
                 if (isset($_POST["nature_Checkbox"]) || isset($_POST["leisure_Checkbox"]) || isset($_POST["adventure_Checkbox"])) {
@@ -328,7 +340,7 @@
             ?>
         
             <div id="btnCon">
-                <button class="btnBooking" onClick="window.location.href='OOP_Part.php'">Confirm</button>
+                <button class="btnBooking" onClick="window.location.href='index.php'">Confirm</button>
             </div> 
             
             <script>
