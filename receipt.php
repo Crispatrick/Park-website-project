@@ -28,13 +28,20 @@
 
 
         //*database insert query
-        include("databaseCon.php");
+                include("databaseCon.php");
 
-        // INSERT DATA
-        // $title = 'Post Five';
-        // $body = 'This is post five';
-        // $author = 'Kevin';
+        $selectedDate = new DateTime($_POST["schedule"]);
+        $currentDate = new DateTime();
 
+        if ($selectedDate < $currentDate) {
+            echo "<script type='text/javascript'>
+                    alert('Cannot book for a past date.');
+                    window.location.href = 'b_all.php';
+                </script>";
+            exit(); 
+        }
+
+        // Insert data into database
         try {
             $query = 'INSERT INTO bookingInfo(fname, lname, email, contact, 
                                                 schedule, pax, pasigueno, comments, payment)
@@ -45,16 +52,15 @@
                                 'lname' => $_SESSION["lname"], 
                                 'email' => $_SESSION["email"],
                                 'contact' => strval($_SESSION["phone"]),
-                                'schedule' =>  $_SESSION["schedule"],
+                                'schedule' => $_SESSION["schedule"],
                                 'pax' => (int)$_POST["quantity"],
                                 'pasigueno' => $_SESSION["pasigueno"],
                                 'comments' => $_SESSION["comment"],
                                 'payment' => $_SESSION["payment"]
                                 ]);
-            // echo 'Post Added';    
         } catch (PDOException $e) {
             echo "<script type = 'text/javascript'>
-                    alert(\"ehhh mali syntax ng query mo par.\")
+                    alert(\"Error: Please check your query.\")
                 </script>";
             die();
         }
