@@ -18,7 +18,7 @@
 
     <section id="container">
         <!-- booking informations - needs to be toggled -->
-        <form action="receipt.php" method="post" target="_blank" id="form">
+        <form action="receipt.php" method="post" target="_blank" id="form" enctype="multipart/form-data">
             <section class="test" id="form" >
                 <section id="user_Info" class="form_Sections">
                     <div class="inputs">
@@ -67,7 +67,8 @@
                     <!-- Upload your ID section -->
                     <div class="inputs" id="idUploadSection" style="display: none;">
                         <label for="validId">Upload ID</label>
-                        <input type="file" id="validId" name="validId" class="types_Size types_Decor file-input">
+                        
+                        <input type="file" id="fileToUpload" name="fileToUpload" class="types_Size types_Decor file-input">
                     </div>
 
 
