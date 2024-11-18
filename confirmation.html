@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        #confirmation-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .info-section {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .info-section div {
+            margin: 5px 0;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #0044cc;
+        }
+        .total-amount {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #d9534f;
+        }
+    </style>
+</head>
+<body>
+
+<div id="confirmation-container">
+    <h1>Booking Confirmation</h1>
+    <h2>Thank you for your reservation!</h2>
+
+    <div class="info-section">
+        <h3>Personal Information</h3>
+        <div><span class="highlight">First Name:</span> <?php echo htmlspecialchars($_SESSION['fname']); ?></div>
+        <div><span class="highlight">Last Name:</span> <?php echo htmlspecialchars($_SESSION['lname']); ?></div>
+        <div><span class="highlight">Email:</span> <?php echo htmlspecialchars($_SESSION['email']); ?></div>
+        <div><span class="highlight">Contact:</span> <?php echo htmlspecialchars($_SESSION['phone']); ?></div>
+    </div>
+
+    <div class="info-section">
+        <h3>Booking Details</h3>
+        <div><span class="highlight">Date of Visit:</span> <?php echo htmlspecialchars($_SESSION['schedule']); ?></div>
+        <div><span class="highlight">Number of Guests:</span> <?php echo htmlspecialchars($_SESSION['quantity']); ?></div>
+        <div><span class="highlight">Pasigueño Resident:</span> <?php echo htmlspecialchars($_SESSION['pasigueno']); ?></div>
+    </div>
+
+    <div class="info-section">
+        <h3>Booked Activities</h3>
+        <?php if (isset($_SESSION['nature'])): ?>
+            <div><span class="highlight">Nature:</span> <?php echo implode(", ", $_SESSION['nature']); ?></div>
+        <?php endif; ?>
+        <?php if (isset($_SESSION['leisure'])): ?>
+            <div><span class="highlight">Leisure:</span> <?php echo implode(", ", $_SESSION['leisure']); ?></div>
+        <?php endif; ?>
+        <?php if (isset($_SESSION['adventure'])): ?>
+            <div><span class="highlight">Adventure:</span> <?php echo implode(", ", $_SESSION['adventure']); ?></div>
+        <?php endif; ?>
+    </div>
+
+    <div class="info-section">
+        <h3>Payment Details</h3>
+        <div><span class="highlight">Payment Method:</span> <?php echo htmlspecialchars($_SESSION['payment']); ?></div>
+        <div class="total-amount">Total Amount: ₱<?php echo htmlspecialchars($_SESSION['sum']); ?> (₱<?php echo htmlspecialchars($_SESSION['orig']); ?> per guest)</div>
+    </div>
+
+    <p>Your reservation has been confirmed. Please save this page as a reference for your booking details. We look forward to seeing you!</p>
+</div>
+
+</body>
+</html>
