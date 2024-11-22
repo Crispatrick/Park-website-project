@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #79AC78;
+}
+.Container {
+    max-width: 800px;
+    margin: 100px auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.h1header {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.h2header {
+    color: #555;
+    margin-top: 30px;
+}
+.ptnc , .litnc { 
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.section-title {
+    font-weight: bold;
+    margin-top: 20px;
+}
+.contact-info {
+    margin-top: 30px;
+    text-align: center;
+}
